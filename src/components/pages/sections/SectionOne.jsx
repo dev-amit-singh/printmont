@@ -3,7 +3,7 @@ import React from 'react';
 const banners = [
   '/section-img/banner1.jpg',
   '/section-img/banner2.jpg',
-  '/section-img/banner3.jpg',
+  '/section-img/banner2.jpg',
   '/section-img/banner4.jpg',
 ];
 
@@ -17,7 +17,7 @@ const SectionOne = () => {
               src={src}
               alt={`Banner ${index + 1}`}
               className="img-fluid rounded shadow-sm w-100 "
-              style={{ height: '200px', objectFit: 'cover' }}
+              style={{ height: 'auto', objectFit: 'cover' }}
             />
           </div>
         ))}
