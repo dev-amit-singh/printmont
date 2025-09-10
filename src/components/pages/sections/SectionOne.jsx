@@ -12,7 +12,7 @@ const SectionOne = () => {
     <div className="container-fluid py-3 bg-light">
       <div className="row g-3 px-3">
         {banners.map((src, index) => (
-          <div className="col-12 col-sm-6 col-lg-3" key={index}>
+          <div className="col-6 col-lg-3" key={index}>
             <img
               src={src}
               alt={`Banner ${index + 1}`}
