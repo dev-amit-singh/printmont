@@ -1,0 +1,98 @@
+/* Wrapper */
+.horizontal-scroll-wrapper {
+    padding: 0 10px;
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  /* Scroll area */
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome */
+  }
+  
+  /* Card */
+  .scroll-card {
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 8px;
+    width: calc((100% - 64px) / 5); /* default for large screens */
+    min-width: 200px;
+    max-width: 260px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Image section */
+  .image-container {
+    height: 250px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Scroll arrows - only show on large screens */
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: none; /* hidden by default */
+  }
+  
+  .scroll-arrow.left {
+    left: 0;
+  }
+  
+  .scroll-arrow.right {
+    right: 0;
+  }
+  
+  /* Show arrows only on desktop */
+  @media (min-width: 1200px) {
+    .scroll-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  /* Medium screens: 3 cards */
+  @media (max-width: 1199px) {
+    .scroll-card {
+      width: calc((100% - 32px) / 3);
+    }
+  }
+  
+  /* Small screens: 2 cards */
+  @media (max-width: 767px) {
+    .scroll-card {
+      width: 70%;
+    }
+  }
+  
