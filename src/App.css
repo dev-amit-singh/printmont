@@ -6,6 +6,15 @@ body {
   overflow-x: hidden;
   background-color: rgb(242, 242, 242);
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.carousel-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden; /* Ensure no child causes scroll */
+}
+
 
 .mobile-footer {
   font-family: 'Segoe UI', sans-serif;
