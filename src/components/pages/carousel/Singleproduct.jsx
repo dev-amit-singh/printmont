@@ -1,91 +1,101 @@
-import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { IoIosArrowBack } from 'react-icons/io';
+import React, { useRef, useState, useEffect } from 'react';
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
-// Custom Prev Arrow
-const PrevArrow = ({ className, onClick }) => (
-  <div
-      className={`${className} prev-arrow`}
-      onClick={onClick}
-    >
-      <FaChevronLeft size={20} color="black" className='arr' />
-    </div>
-);
+const SingleProduct = ({
+  products,
+  title = "Products",
+  badgeText = "Customizable"
+}) => {
+  const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
-// Custom Next Arrow
-const NextArrow = ({ className, onClick }) => (
-  <div
-      className={`${className} next-arrow border-4`} onClick={onClick}>
-      <span className="left-arr-carousel text-black bg-white" ><IoIosArrowBack />
-                </span>
-    </div>
-);
+  const updateScrollButtons = () => {
+    const container = scrollRef.current;
+    if (!container) return;
 
-const Singleproduct = ({ products, title = "Products", badgeText = "Customizable"}) => {
-  const settings = {
-    infinite: true,
-    centerPadding: "20px",
-    slidesToShow: 6,
-    swipeToSlide: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 992,
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 576,
-        settings: { slidesToShow: 1 },
-      },
-    ],
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1); // -1 for rounding errors
   };
 
-  return (
-    <div className="container-fluid mt-4 position-relative -z-1 bg-white pt-2 mx-2">
-      <p className="fw-bold  fs-3 mb-3">{title}</p>
-      <Slider {...settings}>
-        {products.map((product, index) => (
-          <div key={index}>
-            <div className="card h-100 mx-2">
-              <div
-                className='single-product-img'
-              >
-                <img
-                  src={product.img}
-                  alt={product.title}
-                  style={{
-                    maxHeight: "100%",
-                    maxWidth: "100%",
-                    objectFit: "contain",
-                  }}
-                  className="zoom-hover"
-                />
-               
-              </div>
+  const scroll = (direction) => {
+    const container = scrollRef.current;
+    const scrollAmount = 300;
+    if (container) {
+      container.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
-              <div className="card-body p-2 text-center">
-                
-                <p className="mt-2 mb-1 fs-5">{product.title}</p>
-                
-              </div>
+  useEffect(() => {
+    updateScrollButtons(); // Run once on mount
+
+    const container = scrollRef.current;
+    if (!container) return;
+
+    // Update on scroll
+    container.addEventListener("scroll", updateScrollButtons);
+
+    // Update on resize
+    window.addEventListener("resize", updateScrollButtons);
+
+    // Cleanup
+    return () => {
+      container.removeEventListener("scroll", updateScrollButtons);
+      window.removeEventListener("resize", updateScrollButtons);
+    };
+  }, []);
+
+  return (
+    <div className="horizontal-scroll-wrapper position-relative bg-white mx-2 pt-2">
+      <p className="fw-bold fs-3 mb-3">{title}</p>
+
+      {/* Show arrows conditionally */}
+      {canScrollLeft && (
+        <button
+          className="scroll-arrow left "
+          onClick={() => scroll('left')}
+        >
+          <span className="left-arr-carousel text-black bg-white " ><IoIosArrowBack />
+          </span>
+        </button>
+      )}
+
+      {canScrollRight && (
+        <button
+          className="scroll-arrow right  d-flex align-items-center justify-content-end"
+          onClick={() => scroll('right')}
+          aria-label="Scroll right"
+        >
+          <span className=" right-arr-carousel text-black bg-white"><IoIosArrowForward /></span>
+        </button>
+      )}
+
+      <div className="scroll-container " ref={scrollRef}>
+        {products.map((product, index) => (
+          <div className="scroll-card bd  border" key={index}>
+            <div className="image-container  ">
+              <img
+                src={product.img}
+                alt={product.title}
+                className="product-image zoom-hover mt-3"
+              />
+              
+            </div>
+
+            <div className="card-body text-center">
+              
+              <p className="medium my-2">{product.title}</p>
             </div>
           </div>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 };
 
-export default Singleproduct;
+export default SingleProduct;

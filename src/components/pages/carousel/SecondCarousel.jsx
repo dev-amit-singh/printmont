@@ -59,7 +59,6 @@ const SecondCarousel = ({
         <button
           className="scroll-arrow left "
           onClick={() => scroll('left')}
-          aria-label="Scroll left"
         >
           <span className="left-arr-carousel text-black bg-white" ><IoIosArrowBack />
           </span>

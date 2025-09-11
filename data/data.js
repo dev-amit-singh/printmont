@@ -141,6 +141,22 @@ export const bestsellerProduct = [
         discount: "60% Off",
         
     },
+    {
+        title: "Cotton kurti",
+        img: "./men_shirt/men-shirt-4.jpeg",
+        price: 2000,
+        originalPrice: 2500,
+        discount: "60% Off",
+        
+    },
+     {
+        title: "Cotton kurti",
+        img: "./men_shirt/men-shirt-4.jpeg",
+        price: 2000,
+        originalPrice: 2500,
+        discount: "60% Off",
+        
+    },
 ];
 export const discount = [
      {
@@ -174,7 +190,17 @@ export const discount = [
         originalPrice: 1000,
         discount: "70% Off",
         
-    }, 
+    },
+     
+     {
+        title: "Cotton kurti",
+        img: "./men_shirt/men-shirt-4.jpeg",
+        price: 2000,
+        originalPrice: 2500,
+        discount: "60% Off",
+        
+    },
+    
     {
         title: "Realme X50 Pro 5G",
         img: "./card/table-1.jpeg",
@@ -228,6 +254,14 @@ export const dealsandcategories = [
     {
         title: "Realme X50 Pro 5G",
         img: "./card/table-1.jpeg",
+        price: 20000,
+        originalPrice: 25000,
+        discount: "60% Off",
+        
+    },
+    {
+        title: "Realme X50 Pro 5G",
+        img: "./card/table-2.jpeg",
         price: 20000,
         originalPrice: 25000,
         discount: "60% Off",
