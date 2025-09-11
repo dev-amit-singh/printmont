@@ -1,11 +1,15 @@
 import React from 'react';
-import {fristcrouselImg} from "../../../../data/data"
+import { fristcrouselImg } from "../../../../data/data"
+import { IoIosArrowForward } from "react-icons/io";
+
+import { IoIosArrowBack } from "react-icons/io";
+
 
 const FirstCrousel = () => {
-  
+
 
   return (
-    <div id="carouselExample" className="carousel slide" data-bs-ride="carousel"  data-bs-interval="3000" >
+    <div id="carouselExample" className="carousel slide container-fluid" data-bs-ride="carousel" data-bs-interval="3000" >
       <div className="carousel-inner">
         {fristcrouselImg.map((src, index) => (
           <div
@@ -19,22 +23,24 @@ const FirstCrousel = () => {
 
       {/* Carousel Controls */}
       <button
-        className="carousel-control-prev"
+        className="carousel-control-prev d-flex align-items-center justify-content-start ms-3"
         type="button"
         data-bs-target="#carouselExample"
         data-bs-slide="prev"
       >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="left-arr-carousel text-black bg-white" ><IoIosArrowBack />
+        </span>
         <span className="visually-hidden">Previous</span>
       </button>
 
       <button
-        className="carousel-control-next"
+        className="carousel-control-next d-flex align-items-center justify-content-end me-3"
         type="button"
         data-bs-target="#carouselExample"
         data-bs-slide="next"
       >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className=" right-arr-carousel text-black bg-white"><IoIosArrowForward />
+        </span>
         <span className="visually-hidden">Next</span>
       </button>
     </div>

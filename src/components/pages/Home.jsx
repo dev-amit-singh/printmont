@@ -18,10 +18,10 @@ import BrandDirectory from './sections/BrandDirectory'
 const Home = () => {
   return (
     <>
-      <div>
+      <div className=''>
         <Categories />
       <FirstCrousel />
-      <div className='custom-bg'>
+      <div className=''>
 
       <SectionOne />
       </div>
@@ -32,11 +32,9 @@ const Home = () => {
 
       <SectionTwo />
 
-      <div className='position-relative' >
-        <SectionThree />
-      </div>
+      
 
-      <div className='mt-lg-5 pt-lg-4 pt-1 defc'>
+      <div className='mt-lg-5 pt-lg-4 pt-1'>
         <SecondCarousel products={bestsellerProduct} title="Top Selection" badgeText="Customizable" />
 
       </div>
@@ -123,6 +121,7 @@ const Home = () => {
     <div  className='mt-3 mx-0 px-0'>
       <Bannerthree/>
     </div>
+    
     <BrandDirectory/>
       </div>
     </>

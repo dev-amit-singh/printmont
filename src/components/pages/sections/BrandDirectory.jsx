@@ -2,23 +2,23 @@ import React from "react";
 
 const BrandDirectory = () => {
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial", fontSize: "14px" }}>
-      <h3>Top Stories: <strong>Brand Directory</strong></h3>
+    <div style={{ padding: "20px", fontFamily: "Arial", fontSize: "12px" }}>
+      <h6 className="text-secondary">Top Stories: <span className="text-black">Brand Directory</span></h6>
 
-      <p><strong>MOST SEARCHED FOR ON XORDOX:</strong> {Array(30).fill("iPhone 13 Pro").join(" | ")}</p>
-      <p><strong>LARGE APPLIANCES:</strong> {Array(20).fill("Refrigerators").join(" | ")}</p>
-      <p><strong>GROCERIES:</strong> {Array(20).fill("Dal Pulses").join(" | ")}</p>
-      <p><strong>FOOTWEAR:</strong> {Array(20).fill("Adidas Shoes").join(" | ")}</p>
-      <p><strong>BEST SELLING ON XORDOX:</strong> {Array(20).fill("Books").join(" | ")}</p>
+      <p><span>MOST SEARCHED FOR ON XORDOX:</span> {Array(30).fill("iPhone 13 Pro").join(" | ")}</p>
+      <p><strong className="text-secondary">LARGE APPLIANCES:</strong> {Array(20).fill("Refrigerators").join(" | ")}</p>
+      <p><strong className="text-secondary">GROCERIES:</strong> {Array(20).fill("Dal Pulses").join(" | ")}</p>
+      <p><strong className="text-secondary">FOOTWEAR:</strong> {Array(20).fill("Adidas Shoes").join(" | ")}</p>
+      <p><strong className="text-secondary">BEST SELLING ON XORDOX:</strong> {Array(20).fill("Books").join(" | ")}</p>
 
-      <h5 className="mt-5">Xordox: The One-stop Shopping Destination</h5>
+      <strong className="text-secondary fs-6">Xordox: The One-stop Shopping Destination</strong>
       <p>
-        E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles. Xordox houses everything you can possibly imagine...
+        E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles. Xordox houses everything you can possibly imagine from trending electronics like laptops, tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For those of you with erratic working hours, Xordox is your best bet. Shop in your PJs, at night or in the wee hours of the morning. This e-commerce never shuts down.
       </p>
       <p className="txsm">
         What's more, with our year-round shopping festivals and events, our prices are irresistible. We're sure you'll find yourself picking up more than what you had in mind. If you are wondering why you should shop from Xordox when there are multiple options available to you, well, the below will answer your question.
       </p>
-      <h5 className="mt-5">Xordox</h5>
+      <h5 className="mt-2">Xordox</h5>
       <p className="txsm">product-name-font <br />
       <span>What's more, you can even use the Xordox supercoins for a number of exciting services, like:</span><br />
       <span>What's more, you can even use the Xordox supercoins for a number of exciting services, like:</span><br />

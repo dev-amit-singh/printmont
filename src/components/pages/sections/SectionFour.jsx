@@ -11,8 +11,8 @@ const SectionFour = ({ columns = [], imageColumn }) => {
 
       <div className="row g-2 g-sm-3">
         {items.map((item, idx) => (
-          <div className="col-6" key={idx}>
-            <div className="border rounded-3 p-3 text-center bg-white h-100">
+          <div className="col-6 " key={idx}>
+            <div className="border rounded-3 p-3 text-center bg-white h-100 ">
               <img
                 src={item.image}
                 alt={item.title}

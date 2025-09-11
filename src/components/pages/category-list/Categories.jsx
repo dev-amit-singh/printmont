@@ -25,8 +25,8 @@ const Categories = () => {
 
   return (
 
-   <>
-   <div className="container-fluid bg-white shadow-sm py-3">
+   <> 
+   <div className="container-fluid bg-white p-3 bg-white m-2">
   {/* For small and medium: scrollable row */}
   <div className="d-flex d-lg-none overflow-auto gap-3 px-2">
     {categoriesImg.map((item, index) => (

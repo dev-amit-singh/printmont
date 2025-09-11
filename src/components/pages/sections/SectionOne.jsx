@@ -9,14 +9,14 @@ const banners = [
 
 const SectionOne = () => {
   return (
-    <div className="container-fluid py-3 bg-light">
+    <div className="container-fluid py-3 bg-light m-3">
       <div className="row g-3 px-0 px-md-3 ">
         {banners.map((src, index) => (
-          <div className="col-6 col-lg-3" key={index}>
+          <div className="col-6 col-lg-3 rounded-md" key={index}>
             <img
               src={src}
               alt={`Banner ${index + 1}`}
-              className="img-fluid rounded shadow-sm w-100 "
+              className="img-fluid rounded shadow-sm w-100"
               style={{ height: 'auto', objectFit: 'cover' }}
             />
           </div>

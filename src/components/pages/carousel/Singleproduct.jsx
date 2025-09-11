@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { IoIosArrowBack } from 'react-icons/io';
 
 // Custom Prev Arrow
 const PrevArrow = ({ className, onClick }) => (
@@ -18,7 +19,8 @@ const PrevArrow = ({ className, onClick }) => (
 const NextArrow = ({ className, onClick }) => (
   <div
       className={`${className} next-arrow border-4`} onClick={onClick}>
-      <FaChevronRight size={20} color="black" className='arr' />
+      <span className="left-arr-carousel text-black bg-white" ><IoIosArrowBack />
+                </span>
     </div>
 );
 
@@ -26,7 +28,7 @@ const Singleproduct = ({ products, title = "Products", badgeText = "Customizable
   const settings = {
     infinite: true,
     centerPadding: "20px",
-    slidesToShow: 5,
+    slidesToShow: 6,
     swipeToSlide: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -51,7 +53,7 @@ const Singleproduct = ({ products, title = "Products", badgeText = "Customizable
   };
 
   return (
-    <div className="container-fluid mt-4 position-relative -z-1">
+    <div className="container-fluid mt-4 position-relative -z-1 bg-white pt-2 mx-2">
       <p className="fw-bold  fs-3 mb-3">{title}</p>
       <Slider {...settings}>
         {products.map((product, index) => (

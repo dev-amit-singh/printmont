@@ -15,15 +15,17 @@ function App() {
     <>
       
         {/* Desktop Header */}
-      <div className="d-none d-lg-block">
+      <div className="d-none d-lg-block headon">
         <Header />
       </div>
       {/* Mobile Header */}
-      <div className="d-block d-lg-none">
+      <div className="d-block d-lg-none sticky-navbar">
         <MobileHeader />
       </div>
-   
+      <div className='home-main px-1'>
+
       <Home/>
+      </div>
       <Footer/>
       
 
