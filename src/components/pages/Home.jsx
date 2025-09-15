@@ -4,41 +4,42 @@ import FirstCrousel from './carousel/FirstCrousel.jsx'
 import SectionOne from './sections/SectionOne'
 import SecondCarousel from './carousel/SecondCarousel'
 import SectionTwo from './sections/SectionTwo'
-import SectionThree from './sections/SectionThree'
+import SectionThree from './sections/GiftFinder.jsx'
 import Banner from './sections/Banner'
 import BannerTwo from './sections/BannerTwo'
-import {discount, bestsellerProduct, bestsellerProducts, girloutfit, homeDecorItems, tablewareItems,  tablewareItems2, homeDecorItems2, dealsandcategories, } from '../../../data/data'
+import {discount, bestsellerProduct, bestsellerProducts, girloutfit, homeDecorItems, tablewareItems,  tablewareItems2, homeDecorItems2, dealsandcategories, columns,} from '../../../data/data'
 import Singleproduct from './carousel/Singleproduct'
 import SectionFour from './sections/SectionFour'
 import SectionFourReverse from './sections/SectionFourReverse'
-import SectionSix from './sections/SectionSix'
+import SectionGrid from './sections/SectionGrid.jsx'
 import Bannerthree from './Bannerthree'
 import BrandDirectory from './sections/BrandDirectory'
+import SectionEight from './sections/SectionEight.jsx'
+import Slider from './carousel/Slider.jsx'
 
 const Home = () => {
   return (
     <>
-      <div className=''>
+      <div>
         <Categories />
-      <FirstCrousel />
-      <div className=''>
 
+      <FirstCrousel />
+
+      <Slider/>
+
+      <div className='bg-transparent'>
       <SectionOne />
       </div>
-      <div className='defc pt-0 mt-0'>
 
+      <div className='defc '>
         <SecondCarousel products={bestsellerProducts} title="Our Bestellers" badgeText="Customizable" />
       </div>
 
       <SectionTwo />
 
-      
-
-      <div className='mt-lg-5 pt-lg-4 pt-1'>
+      <div className='mt-lg-2 pt-lg-4 pt-1'>
         <SecondCarousel products={bestsellerProduct} title="Top Selection" badgeText="Customizable" />
-
       </div>
-
 
       <div className='my-3 mx-0 px-0'>
         <Banner />
@@ -116,13 +117,22 @@ const Home = () => {
     </div>
 
     <div>
-      <SectionSix/>
+      <SectionEight columns={columns}/>
+    </div>
+    <div  className='mt-3 mx-0 px-0'>
+      <BannerTwo/>
+    </div>
+
+    <div>
+      <SectionGrid />
     </div>
     <div  className='mt-3 mx-0 px-0'>
       <Bannerthree/>
     </div>
     
     <BrandDirectory/>
+
+    
       </div>
     </>
   )

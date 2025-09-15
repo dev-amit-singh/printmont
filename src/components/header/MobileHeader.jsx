@@ -86,7 +86,7 @@ const MobileHeader = () => {
 
       {/* Offcanvas Sidebar */}
       <div
-        className="offcanvas offcanvas-start"
+        className="offcanvas offcanvas-start w-75"
         tabIndex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"

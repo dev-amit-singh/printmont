@@ -26,9 +26,9 @@ const Categories = () => {
   return (
 
    <> 
-   <div className="container-fluid bg-white p-3 bg-white m-2">
+   <div className="container-fluid bg-white p-3 bg-white m-0">
   {/* For small and medium: scrollable row */}
-  <div className="d-flex d-lg-none overflow-auto gap-3 px-2">
+  <div className="d-flex d-lg-none overflow-auto gap-0 gap-md-3  px-md-2">
     {categoriesImg.map((item, index) => (
       <div
         key={index}
@@ -40,12 +40,12 @@ const Categories = () => {
           alt={item.name}
           className="rounded mb-1 border"
           style={{
-            width: '70px',
-            height: '70px',
+            width: '50px',
+            height: '50px',
             objectFit: 'cover',
           }}
         />
-        <small className="text-truncate w-100">{item.name}</small>
+        <small className="text-wrap w-100 ">{item.name}</small>
       </div>
     ))}
   </div>

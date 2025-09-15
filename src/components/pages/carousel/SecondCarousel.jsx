@@ -51,13 +51,13 @@ const SecondCarousel = ({
   }, []);
 
   return (
-    <div className="horizontal-scroll-wrapper position-relative bg-white mx-2 pt-2">
-      <p className="fw-bold fs-3 mb-3">{title}</p>
+    <div className="horizontal-scroll-wrapper position-relative bg-white pt-3 m-0 m-md-1 ">
+      <p className="fw-semibold fs-4 mb-3 ms-3 ">{title}</p>
 
       {/* Show arrows conditionally */}
       {canScrollLeft && (
         <button
-          className="scroll-arrow left "
+          className="scroll-arrow left align-items-center justify-content-end border-0 ms-5 d-none d-lg-flex"
           onClick={() => scroll('left')}
         >
           <span className="left-arr-carousel text-black bg-white" ><IoIosArrowBack />
@@ -67,7 +67,7 @@ const SecondCarousel = ({
 
       {canScrollRight && (
         <button
-          className="scroll-arrow right  d-flex align-items-center justify-content-end"
+          className="scroll-arrow right  align-items-center justify-content-end border-0 me-2 d-none d-lg-flex "
           onClick={() => scroll('right')}
           aria-label="Scroll right"
         >
@@ -77,8 +77,8 @@ const SecondCarousel = ({
 
       <div className="scroll-container " ref={scrollRef}>
         {products.map((product, index) => (
-          <div className="scroll-card  border" key={index}>
-            <div className="image-container bd border">
+          <div className="scroll-card  border pb-3 pb-lg-0" key={index}>
+            <div className="image-container  bg-white ">
               <img
                 src={product.img}
                 alt={product.title}
@@ -90,13 +90,13 @@ const SecondCarousel = ({
             </div>
 
             <div className="card-body text-center">
-              <div className="bg-theme text-uppercase text-white small fs-7 fs-md-6">
+              <div className="d-none d-lg-flex bg-theme text-uppercase text-white fw-medium mt-1 fs-7 fs-md-6">
                 {badgeText}
               </div>
-              <p className="medium mb-0">{product.title}</p>
-              <p className="mb-0">
-                ₹{product.price}{" "}
-                <del className="text-muted">₹{product.originalPrice}</del>{" "}
+              <p className="medium mb-0 title">{product.title}</p>
+              <p className="mb-0 title">
+               ₹{product.price}{" "}
+                <del className="text-muted title">₹{product.originalPrice}</del>{" "}
                 <span className="text-success fw-bold">{product.discount}</span>
               </p>
             </div>

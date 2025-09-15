@@ -7,6 +7,7 @@ import Header from './components/header/Header'
 import Home from './components/pages/Home'
 import Footer from './components/footer/Footer'
 import MobileHeader from './components/header/MobileHeader';
+import MobHome from './components/pages/MobHome';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,7 +25,8 @@ function App() {
       </div>
       <div className='home-main px-1'>
 
-      <Home/>
+      <div className='d-none d-lg-flex'><Home/></div>
+      <div className='d-block d-lg-none'><MobHome/></div>
       </div>
       <Footer/>
       

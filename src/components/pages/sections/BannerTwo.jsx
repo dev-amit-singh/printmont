@@ -4,15 +4,15 @@ const BannerTwo = () => {
   return (
     <>
       {/* Large screens (≥ md): Flex side-by-side layout */}
-      <div className="container-fluid bg-light d-none d-md-flex align-items-center justify-content-center gap-1 p-0 m-md-2">
+      <div className="container-fluid bg-light d-none d-md-flex align-items-center justify-content-center gap-2 pe-4 m-md-2">
         <div className="col-4 p-0 rounded">
           <img className='rounded' src="./section-img/girl-with-bag.jpg" width="100%" alt="online-shopping" />
         </div>
-        <div className="col-4 p-0 rounded-sm">
-          <img src="./section-img/online-shopping.jpg" width="100%" alt="lap-hoodie" />
+        <div className="col-4 p-0 rounded">
+          <img className='rounded' src="./section-img/online-shopping.jpg" width="100%" alt="lap-hoodie" />
         </div>
-        <div className="col-4 p-0 rounded-sm">
-          <img src="./section-img/footwear.jpg" width="100%" alt="lap-hoodie" />
+        <div className="col-4 p-0 rounded">
+          <img className='rounded' src="./section-img/footwear.jpg" width="100%" alt="lap-hoodie" />
         </div>
       </div>
 
@@ -26,14 +26,12 @@ const BannerTwo = () => {
         >
           <div className="carousel-inner">
             <div className="carousel-item active ">
-              <img src="./section-img/online-shopping.jpg" className="d-block w-100" alt="online-shopping" />
+              <img src="/banners/banner2-1.png" className="d-block w-100" alt="online-shopping" />
             </div>
             <div className="carousel-item">
-              <img src="./section-img/girl-with-bag.jpg" className="d-block w-100" alt="girl-with-bag" />
+              <img src="/banners/banner2-2.png" className="d-block w-100" alt="girl-with-bag" />
             </div>
-            <div className="carousel-item">
-              <img src="./section-img/footwear.jpg" className="d-block w-100" alt="footwear" />
-            </div>
+            
           </div>
 
           

@@ -26,14 +26,17 @@
     background: white;
     border-radius: 8px;
     width: calc((100% - 64px) / 5); /* default for large screens */
-    min-width: 200px;
+    min-width: 20px;
     max-width: 260px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border: 2px solid red;
   }
+  
+  
   
   /* Image section */
   .image-container {
-    height: 250px;
+    height: 280px;
     background-color: #f8f8f8;
     display: flex;
     align-items: center;
@@ -93,6 +96,9 @@
   @media (max-width: 767px) {
     .scroll-card {
       width: 70%;
+    }
+    .scroll-card{
+      width:  160px;
     }
   }
   
