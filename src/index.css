@@ -36,7 +36,7 @@
   
   /* Image section */
   .image-container {
-    height: 280px;
+    height: 210px;
     background-color: #f8f8f8;
     display: flex;
     align-items: center;
@@ -98,7 +98,48 @@
       width: 70%;
     }
     .scroll-card{
-      width:  160px;
+      width:  130px;
     }
   }
+  .bulk-order-container {
+  position: fixed;
+  top: 50%;
+  right: -35px;
+  /* left: 80%; */
+  transform: translateY(10%) rotate(-90deg);
+  z-index: 9999; /* Keep it above most elements */
+}
+
+.bulk-order-label {
+  padding: 6px 12px; /* Bootstrap danger color */
+  color: white;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Container */
+.bulk-form-modal {
+  background-color: #fff;
+  padding: 24px;
+  width: 100%;
+  max-width: 460px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
   

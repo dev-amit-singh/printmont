@@ -30,7 +30,7 @@ const BrandDirectory = () => {
       <span>Rupees 550 instant discount on flights on ixigo</span><br />
       <span>anCheck out for the entire list. Terms and conditions apply.</span><br />
         </p>
-        <strong className="mt-4 fs-6 text-secondary">No Cost EMI</strong>
+        <strong className="mt-2 fs-6 text-secondary">No Cost EMI</strong>
         <p className="txsm text-secondary">In an attempt to make high-end products accessible to all, our No Cost EMI plan enables you to shop with us under EMI, without shelling out any processing fee. Applicable on select mobiles, laptops, large and small appliances, furniture, electronics and watches, you can now shop without burning a hole in your pocket. If you've been eyeing a product for a long time, chances are it may be up for a no cost EMI. Take a look ASAP! Terms and conditions apply.</p>
 
         <strong className="mt-4 fs-6 text-secondary">EMI on Debit Cards</strong>

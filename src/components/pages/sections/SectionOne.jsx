@@ -9,10 +9,10 @@ const banners = [
 
 const SectionOne = () => {
   return (
-    <div className="container-fluid py-2">
-      <div className="row g-1 px-0 px-md-3">
+    <div className="container-fluid m-0 p-0">
+      <div className="row gap-0 m-0 px-0 container-fluid d-flex g-1">
         {banners.map((src, index) => (
-          <div className="col-6 col-lg-3 rounded-md" key={index}>
+          <div className="col-6 col-lg-3 rounded-md " key={index}>
             <img
               src={src}
               alt={`Banner ${index + 1}`}

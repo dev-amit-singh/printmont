@@ -67,7 +67,7 @@ const SecondCarousel = ({
 
       {canScrollRight && (
         <button
-          className="scroll-arrow right  align-items-center justify-content-end border-0 me-2 d-none d-lg-flex "
+          className="scroll-arrow right  align-items-center justify-content-end border-0 me-2 d-none d-lg-flex"
           onClick={() => scroll('right')}
           aria-label="Scroll right"
         >
@@ -78,7 +78,7 @@ const SecondCarousel = ({
       <div className="scroll-container " ref={scrollRef}>
         {products.map((product, index) => (
           <div className="scroll-card  border pb-3 pb-lg-0" key={index}>
-            <div className="image-container  bg-white ">
+            <div className="image-container bg-white ">
               <img
                 src={product.img}
                 alt={product.title}
@@ -90,13 +90,13 @@ const SecondCarousel = ({
             </div>
 
             <div className="card-body text-center">
-              <div className="d-none d-lg-flex bg-theme text-uppercase text-white fw-medium mt-1 fs-7 fs-md-6">
+              <div className="d-none d-lg-flex justify-content-center align-item-center bg-theme text-uppercase text-white fw-medium mt-1 fs-7 fs-md-6">
                 {badgeText}
               </div>
               <p className="medium mb-0 title">{product.title}</p>
-              <p className="mb-0 title">
+              <p className="mb-0 title p-1">
                ₹{product.price}{" "}
-                <del className="text-muted title">₹{product.originalPrice}</del>{" "}
+                <del className="text-muted title">₹{product.originalPrice}</del>{" "} 
                 <span className="text-success fw-bold">{product.discount}</span>
               </p>
             </div>

@@ -16,11 +16,12 @@ import Bannerthree from './Bannerthree'
 import BrandDirectory from './sections/BrandDirectory'
 import SectionEight from './sections/SectionEight.jsx'
 import Slider from './carousel/Slider.jsx'
+import BulkOrder from './sections/BulkOrder.jsx'
 
 const Home = () => {
   return (
     <>
-      <div>
+      <div className='relative'>
         <Categories />
 
       <FirstCrousel />
@@ -132,7 +133,7 @@ const Home = () => {
     
     <BrandDirectory/>
 
-    
+    <BulkOrder/>
       </div>
     </>
   )

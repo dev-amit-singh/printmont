@@ -47,10 +47,10 @@ const SingleProduct = ({
 
   return (
     <div
-      className={`horizontal-scroll-wrapper position-relative bg-transparent mx-2 pt-3 ${backgroundImageUrl ? 'custom-bg-image' : ''}`}
+      className={`horizontal-scroll-wrapper position-relative bg-transparent mx-0 mx-lg-1 pt-3 ${backgroundImageUrl ? 'custom-bg-image' : ''}`}
       style={{ backgroundImage: backgroundImageUrl ? `url(${backgroundImageUrl})` :  {backgroundColor: 'white'} }}
     >
-      <p className="fw-semibold fs-5 fs-md-4 mb-3 ms-3">{title}</p>
+      <p className="fw-semibold fs-5 fs-md-4 mb-1 mb-lg-3 ms-0 ms-lg-3">{title}</p>
 
       {canScrollLeft && (
         <button className="scroll-arrow left" onClick={() => scroll('left')}>
@@ -69,10 +69,10 @@ const SingleProduct = ({
         </button>
       )}
 
-      <div className="scroll-container" ref={scrollRef}>
+      <div className="scroll-container m-0 p-0" ref={scrollRef}>
         {products.map((product, index) => (
-          <div className="scroll-card bd border" key={index}>
-            <div className="image-container">
+          <div className="scroll-card bd border m-0 p-0" key={index}>
+            <div className="image-container m-0 p-0">
               <img
                 src={product.img}
                 alt={product.title}

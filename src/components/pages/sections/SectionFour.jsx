@@ -19,12 +19,12 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
 
       <div className="row g-sm-0 g-1 ">
         {items.map((item, idx) => (
-          <div className="col-6 mb-1 mb-lg-3" key={idx}>
+          <div className="col-6 mb-0 mb-lg-0 g-1" key={idx}>
             <div className="border rounded-3 p-1 text-center bg-white  h-100">
               <img
                 src={item.image}
                 alt={item.title}
-                className="img-fluid mb-3 bg-white"
+                className="img-fluid mb-2 bg-white"
                 style={{
                   maxHeight: '220px', // ← Increased from 150px
                   objectFit: 'contain',
@@ -40,11 +40,8 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
   );
 
   return (
-    <div
-      className="container-fluid px-md-3 py-0 custom-bg"
-      
-    >
-      <div className="row g-2 align-items-stretch"
+    <div className="container-fluid px-md-1 py-0 bg-white m-0">
+      <div className="row g-0 g-md-1 align-items-stretch p-0 m-0"
       >
         {/* Product Columns */}
         {columns.map((col, index) => (
@@ -61,7 +58,7 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
               <img
                 src={imageColumn.imageUrl}
                 alt={imageColumn.alt || 'Showcase'}
-                className="w-100 h-100"
+                className="w-100 h-100 zoom-hover"
                 style={{
                   objectFit: 'cover',
                   display: 'block',

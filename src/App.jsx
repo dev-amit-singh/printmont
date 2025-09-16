@@ -25,8 +25,10 @@ function App() {
       </div>
       <div className='home-main px-1'>
 
-      <div className='d-none d-lg-flex'><Home/></div>
-      <div className='d-block d-lg-none'><MobHome/></div>
+      {/* <div className='d-none d-lg-flex'> */}
+        <Home/>
+        {/* </div> */}
+      {/* <div className='d-block d-lg-none'><MobHome/></div> */}
       </div>
       <Footer/>
       

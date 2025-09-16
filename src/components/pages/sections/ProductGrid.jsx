@@ -5,38 +5,30 @@ import { gridproducts } from '../../../../data/data';
 
 const ProductGrid = () => {
     return (
-        <div className="container m-0 pt-3">
-            <h5 className="mb-3">End of Season Sale</h5>
+        <div className="container mt-4 mt-lg-3">
+            <h5 className="mb-1 mb-lg-3">End of Season Sale</h5>
 
             <div className="row gap-0">
                 {gridproducts.map((item) => (
                     <div
                         key={item.id}
-                        className="col-4 col-sm-4 mb-3 m-0 p-0 d-flex justify-content-center "
+                        className="col-4 col-sm-4 mb-3 m-0 p-0 d-flex justify-content-center gap-1"
                     >
                         <div
-                            className="card text-center bd p-1 m-1"
+                            className="card text-center bd p-1"
                             style={{
                                 width: '380px',        // Set your desired width
                                 maxWidth: '100%',      // Prevent overflow on small screens
-                                margin: '1', // Center the card if needed
+                                margin: '3px', // Center the card if needed
                             }}
                         >
 
                             {/* ✅ Square image container */}
                             <div
-                                className="w-100"
+                                className="w-100 ratio ratio-1x1 d-flex align-items-center justify-content-center overflow-hidden rounded-top bg-light"
                                 style={{
-                                    aspectRatio: '2/2', // or '4/3', '3/4', etc. for different shapes
-                                    width: '100%',
-                                    position: 'relative',
-                                    overflow: 'hidden',
-                                    borderTopLeftRadius: '0.375rem',
-                                    borderTopRightRadius: '0.375rem',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    background: '#f8f9fa', // optional: for empty space
+                                    
+                                    position: 'relative', // optional: for empty space
                                 }}
                             >
                                 <img

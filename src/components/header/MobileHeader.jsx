@@ -17,10 +17,7 @@ import { CiHeart } from "react-icons/ci";
 import { IoSearch, IoSearchSharp } from "react-icons/io5";
 
 const MobileHeader = () => {
-  const [dropdowns, setDropdowns] = useState({
-    giftSets: false,
-    stationary: false,
-  });
+  const [dropdowns, setDropdowns] = useState({});
 
   const toggleDropdown = (key) => {
     setDropdowns((prev) => ({
@@ -32,7 +29,7 @@ const MobileHeader = () => {
   return (
     <>
       {/* Sticky Navbar */}
-      <nav className="navbar px-3 py-2 bg-white shadow-sm ">
+      <nav className="navbar px-2 py-2 bg-white shadow-sm ">
         <div className="d-flex align-items-center gap-3">
           <button
             className="btn p-0 border-0"
@@ -101,37 +98,42 @@ const MobileHeader = () => {
 
         <div className="offcanvas-body p-0">
           <ul className="list-group rounded-0">
-            {/* Dropdown Example */}
-            <li className="list-group-item px-3 py-2">
-              <div className="d-flex justify-content-between align-items-center" onClick={() => toggleDropdown('giftSets')} style={{ cursor: 'pointer' }}>
-                <span>Gift Sets</span>
-                <span className="fw-bold fs-5">{dropdowns.giftSets ? '−' : '+'}</span>
-              </div>
-              {dropdowns.giftSets && (
-                <ul className="list-unstyled mt-2 ps-3">
-                  <li><a href="#" className="text-decoration-none text-secondary d-block py-1">Corporate Gifts</a></li>
-                  <li><a href="#" className="text-decoration-none text-secondary d-block py-1">Employee Gifts</a></li>
-                </ul>
-              )}
-            </li>
-            {/* Add other dropdowns here... */}
+            {/* Dynamically render dropdowns */}
+            {Array.from({ length: 8 }, (_, i) => {
+              const key = `set${i + 1}`;
+              return (
+                <li className="list-group-item px-3 py-1" key={key}>
+                  <div
+                    className="d-flex justify-content-between align-items-center"
+                    onClick={() => toggleDropdown(key)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <span className='text-muted small fw-semibold'>Set {i + 1}</span>
+                    <span className="fw-bold fs-5">{dropdowns[key] ? '−' : '+'}</span>
+                  </div>
+                  {dropdowns[key] && (
+                    <ul className="list-unstyled mt-2 ps-3">
+                      <li><a href="#" className="text-decoration-none text-secondary d-block py-1">Corporate Gifts</a></li>
+                      <li><a href="#" className="text-decoration-none text-secondary d-block py-1">Employee Gifts</a></li>
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
           </ul>
 
           {/* Account Section */}
-          <div className="bg-light mt-2 pt-2">
-            <ul className="list-group list-group-flush">
+          <div className="bg-light mt-2 pt-1">
+            <ul className="list-group list-group-flush m-0 p-0">
               <li className="list-group-item d-flex align-items-center gap-2"><FaUser /> My Account</li>
               <li className="list-group-item d-flex align-items-center gap-2"><FaBoxOpen /> My Orders</li>
               <li className="list-group-item d-flex align-items-center gap-2"><FaPaperPlane /> Track Order</li>
               <li className="list-group-item d-flex align-items-center gap-2"><FaWallet /> My Wallet</li>
-              <li className="list-group-item d-flex align-items-center gap-2"><FaStore /> Sell On Xordox</li>
+              <li className="list-group-item d-flex align-items-center gap-2"><FaStore /> Sell On Printmont</li>
             </ul>
           </div>
         </div>
       </div>
-
-      {/* Dummy content to test sticky */}
-      
     </>
   );
 };

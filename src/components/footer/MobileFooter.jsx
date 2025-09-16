@@ -17,31 +17,31 @@ const MobileFooter = () => {
             {/* Top Icons with Text */}
             <div className="d-flex justify-content-around text-center mb-3">
                 <div>
-                    <FaTruck size={30} className="text-primary mb-1" />
-                    <p className="small mb-0 fw-semibold">Free Shipping.</p>
-                    <p className="text-muted small">No one rejects Dislike.</p>
+                    <div><img src={'/free.png'} alt="Free Shipping" className="me-2 feature-icon" /></div>
+                    <p className="txsm mb-0 fw-semibold">Free Shipping.</p>
+                    <p className="text-muted txex">No one rejects Dislike.</p>
                 </div>
                 <div>
-                    <FaShieldAlt size={30} className="text-success mb-1" />
-                    <p className="small mb-0 fw-semibold">Online Payment.</p>
-                    <p className="text-muted small">100% secure payment.</p>
+                    <div><img src={'/secure.png'} alt="Free Shipping" className="me-2 feature-icon" /></div>
+                    <p className="txsm mb-0 fw-semibold">Online Payment.</p>
+                    <p className="text-muted txex">100% secure payment.</p>
                 </div>
                 <div>
-                    <FaCertificate size={30} className="text-primary mb-1" />
-                    <p className="small mb-0 fw-semibold">100% Original</p>
-                    <p className="text-muted small">Guaranteed products</p>
+                    <div><img src={'/original.png'} alt="Free Shipping" className="me-2 feature-icon" /></div>
+                    <p className="txsm mb-0 fw-semibold">100% Original</p>
+                    <p className="text-muted txex">Guaranteed products</p>
                 </div>
             </div>
 
             {/* Rounded Buttons */}
             <div className="d-flex justify-content-center gap-2 mb-3 flex-wrap">
-                <button className=" px-3 py-2 btn-small-text">
+                <button className=" px-3 py-2 btn-small-text fw-bold">
                     CONTACT US
                 </button>
-                <button className=" px-3 btn-small-text">
+                <button className=" px-3 btn-small-text fw-bold">
                     QUICK LINKS
                 </button>
-                <button className=" px-3 btn-small-text">
+                <button className=" px-3 btn-small-text fw-bold">
                     HELP NOW
                 </button>
 

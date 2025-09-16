@@ -22,6 +22,11 @@ body {
   border-color: black;
   border-width: 0.5px;
 }
+.wbd{
+  border-width: 0.1px;
+  border-color: white;
+}
+
 .right-arr-carousel{
   /* border: 1px solid red; */
   font-size: 3rem;
@@ -124,7 +129,7 @@ footer i {
 }
 
 .foot-bg {
-  background-color: rgb(2, 2, 28);
+  background-color: rgb(24, 35, 56);
 }
 
 
@@ -340,6 +345,7 @@ border-radius: 10px;
 }
 .scroll-container {
   display: flex;
+  gap: 5px;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
@@ -352,6 +358,10 @@ border-radius: 10px;
   background: transparent;
   border: 1px solid black;
   z-index: 10;
+  opacity: 50%;
+}
+.scroll-arrow:hover{
+  opacity: 90%;
 }
 
 .scroll-arrow.left {
@@ -398,6 +408,16 @@ border-radius: 10px;
   background-position: center;
 
 }
+input:focus {
+  outline: none; /* remove default browser outline */
+  border: 2px solid #0d6efd; /* blue border */
+  box-shadow: 0 0 4px rgba(13, 110, 253, 0.5); /* subtle glow */
+}
+.feature-icon {
+  width: 50px;
+  /* height: 32px; */
+}
+
  
 
 @media (max-width: 600px) {
@@ -412,7 +432,7 @@ border-radius: 10px;
     display: none;
   }
   .image-container{
-    height: 150px;
+    height: 140px;
     
   }
 
@@ -461,6 +481,9 @@ border-radius: 10px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+  .feature-icon{
+    width: 50px;
   }
 }
 
@@ -554,6 +577,8 @@ border-radius: 10px;
     background-image: none;
     background-color: white;
   }
-
+.find-product{
+  font-size: xx-large;
+}
 
 }

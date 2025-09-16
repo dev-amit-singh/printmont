@@ -51,7 +51,7 @@ const SectionFourReverse = ({ columns = [] }) => {
 
   // ✅ Layout wrapper
   return (
-    <div className="container-fluid px-md-3 pt-3 custom-bg">
+    <div className="container-fluid px-md-3 pt-0 custom-bg">
       <div className="row g-2 align-items-stretch">
         {columns.map((col, index) => (
           <div className="col-12 col-lg-4" key={index}>
