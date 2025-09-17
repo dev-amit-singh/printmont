@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Ico = () => {
+const IconX = () => {
   return (
     <>
     <div className="feature-strip bg-light py-3 bg-secondary-emphasis">
@@ -51,4 +51,4 @@ const Ico = () => {
   )
 }
 
-export default Ico
+export default IconX

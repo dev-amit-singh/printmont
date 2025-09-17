@@ -1,26 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  FaFacebook,
-  FaBullhorn,
-  FaQuestionCircle,
-  FaRupeeSign,
-  FaStore,
-  FaLinkedin,
   FaYoutube,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import MobileFooter from "./MobileFooter";
-import Ico from "./ico";
+import IconX from "./IconX";
 
 const Footer = () => {
   return (
     <>
-      <div className="d-none d-lg-block"><Ico/></div>
+      <div className="d-none d-lg-block"><IconX/></div>
       <footer className="foot-bg text-light pt-5 pb-2 small-screen-foot">
         <div className="container-fluid px-5">
           <div className="row g-4">
