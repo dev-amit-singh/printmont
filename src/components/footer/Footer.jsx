@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="row g-4">
                 {/* Our Company */}
                 <div className="col-6 col-md-3 ">
-                  <h6 className="text-uppercase medium text-white-50">Our Company</h6>
+                  <h6 className="text-uppercase small text-white-50">Our Company</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
                     <li>Contact Us</li>
                     <li>About Us</li>
@@ -41,7 +41,7 @@ const Footer = () => {
 
 
                 <div className="col-6 col-md-3">
-                  <h6 className="text-uppercase medium text-white-50">Policy Info</h6>
+                  <h6 className="text-uppercase small text-white-50">Policy Info</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
                     <li>Terms & Conditions</li>
                     <li>Privacy Policy</li>
@@ -52,7 +52,7 @@ const Footer = () => {
 
                 {/* Quick Links */}
                 <div className="col-6 col-md-3">
-                  <h6 className="text-uppercase medium text-white-50">Quick Links</h6>
+                  <h6 className="text-uppercase small text-white-50">Quick Links</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
                     <li>Help Center</li>
                     <li>Security</li>
@@ -64,7 +64,7 @@ const Footer = () => {
 
                 {/* Support */}
                 <div className="col-6 col-md-3">
-                  <h6 className="text-uppercase medium text-white-50">Support</h6>
+                  <h6 className="text-uppercase small text-white-50">Support</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
                     <li>Account Settings</li>
                     <li>My Orders</li>
@@ -130,18 +130,18 @@ const Footer = () => {
 
           {/* Bottom row */}
           <div className="row text-center text-md-start align-items-center gy-3">
-            <div className="col-12 col-md-6 d-flex flex-wrap justify-content-center justify-content-md-start gap-3 small">
+            <div className="col-12 col-md-6 d-flex flex-wrap justify-content-around justify-content-md-start gap-5 small">
               <span>
-                <FaStore /> Become a Seller
+                <img src="/become-seller.png" alt="" width={"20px"} height={"20px"}/> Become a Seller
               </span>
               <span>
-                <FaBullhorn /> Advertising
+                <img src="/advertising.png" alt="" width={"20px"} height={"20px"}/> Advertising
               </span>
               <span>
-                <FaRupeeSign /> Printmont Coins
+                <img src="/printmont-coin.png" alt="" width={"20px"} height={"20px"}/> Printmont Coins
               </span>
               <span>
-                <FaQuestionCircle /> Help Center
+                <img src="/Help-center.png" alt="" width={"20px"} height={"20px"}/> Help Center
               </span>
             </div>
             <div className="col-12 col-md-3 small text-center">
