@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import {
   Navbar,
   Container,
   Nav,
 } from "react-bootstrap";
-import { CiHeart } from "react-icons/ci";
-import { FaHeart, FaRegUser, FaShoppingCart, FaUser } from "react-icons/fa";
+import { GoHeart } from "react-icons/go";
+import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 import { GiShoppingCart } from "react-icons/gi";
 import { IoSearch } from "react-icons/io5";
 import LoginDropdown from "./LoginDropdown";
 
 function Header() {
+  const [showPreferences, setShowPreferences] = useState(false);
+  const preferenceRef = useRef();
+
   return (
     <>
-      <div className="container-fluid  bg-white headon">
+      <div className="container-fluid bg-white headon">
         <div className="container-fluid d-flex justify-content-around align-items-center">
           <Navbar expand="lg" className="border-bottom py-2">
             <Container fluid>
@@ -24,43 +27,66 @@ function Header() {
 
               <Navbar.Toggle aria-controls="main-navbar" />
 
-              <Navbar.Collapse id="main-navbar" >
+              <Navbar.Collapse id="main-navbar">
                 {/* Center: Search Bar */}
-                <div className=" nav-searchbar me-4 rounded border">
+                <div className="nav-searchbar me-4 rounded border">
                   <div className="input-group">
                     <input
-                    id="global-seacrh"
+                      id="global-seacrh"
                       type="text"
-                      className="form-control bg-transparent border-0 b"
+                      className="form-control bg-transparent border-0"
                       placeholder="Search for products, Brands and more"
                       aria-label="Search"
                     />
                     <button className="rounded border-0 bg-transparent me-3 mb-1" type="button">
-                      <IoSearch size={20} color="rgb(41, 117, 240) " />
+                      <IoSearch size={20} color="rgb(41, 117, 240)" />
                     </button>
                   </div>
                 </div>
 
                 {/* Right: Icons */}
-                <Nav className="ms-auto d-flex align-items-center gap-4 text-center">
-                  <Nav.Link href="#" className="d-flex align-items-center gap-1">
+                <Nav className="ms-auto d-flex align-items-center gap-2 text-center">
+                  <Nav.Link href="#" className="d-flex align-items-center gap-2">
                     <div className="position-relative">
-                      <CiHeart size={25} color="#007bff" />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>
+                      <GoHeart size={25} color="#007bff" />
+                      <div className="notify-mes"><span className="notify-num">4</span></div>
                     </div>
+                    <span className="fs-6 ms-2">Wishlist</span>
                   </Nav.Link>
 
-                  <Nav.Link href="#" className="d-flex align-items-center gap-1">
+                  <Nav.Link href="#" className="d-flex justify-content-center align-items-center gap-2">
                     <div className="position-relative">
-                      <GiShoppingCart size={25} color="#007bff" />
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2</span>
+                      <GiShoppingCart size={30} color="#007bff" />
+                      <div className="notify-mes">
+                        <span className="notify-num">4</span>
+                      </div>
                     </div>
+                    <span className="fs-6">Cart</span>
                   </Nav.Link>
 
                   <div className="d-flex align-items-center gap-1 nav-link">
                     <LoginDropdown />
                   </div>
 
+                  {/* Hover-based Three Dots Menu */}
+                  <div
+                    className="position-relative border bd  rounded"
+                    ref={preferenceRef}
+                    onMouseEnter={() => setShowPreferences(true)}
+                    onMouseLeave={() => setShowPreferences(false)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <PiDotsThreeOutlineVerticalFill size={24} className="p-1 text-primary"/>
+
+                    {showPreferences && (
+                      <div className="dropdown-menu show preference-menu position-absolute end-1 top-20 z-3 d-block min-w-200 p-2  shadow rounded bg-white border-0">
+                        <div className="dropdown-item">📈 Become a Seller</div>
+                        <div className="dropdown-item">🔔 Notification Preferences</div>
+                        <div className="dropdown-item">🎧 24x7 Customer Care</div>
+                        <div className="dropdown-item">📈 Advertise</div>
+                      </div>
+                    )}
+                  </div>
                 </Nav>
               </Navbar.Collapse>
             </Container>

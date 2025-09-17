@@ -417,6 +417,39 @@ input:focus {
   width: 50px;
   /* height: 32px; */
 }
+.notify-num{
+  font-size: 10px;
+  border-radius: 50%;
+  width: 17px;
+  height: 1 7px;
+  font-weight: bolder;
+  background-color: rgb(13, 109, 252);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notify-mes{
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 18px;
+
+}
+.preference-menu .dropdown-item {
+  padding: 8px 12px;
+  /* right: 0; */
+  left: 0;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+}
+
+.preference-menu .dropdown-item:hover {
+  background-color: #f1f1f1;
+  
+}
 
  
 

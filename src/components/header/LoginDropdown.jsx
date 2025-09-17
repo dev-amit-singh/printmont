@@ -5,7 +5,7 @@ const LoginDropdown = () => {
   return (
     <div className="dropdown-container position-relative d-inline-block">
       {/* Trigger */}
-      <div className="login-hover px-3 py-1 border rounded d-flex align-items-center gap-2">
+      <div className=" px-3 py-1 border rounded d-flex align-items-center gap-2">
         <FaRegUser color="#007bff" />
         <span className="text-primary fw-semibold">Login</span>
       </div>
