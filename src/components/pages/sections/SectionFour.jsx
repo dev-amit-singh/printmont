@@ -4,7 +4,7 @@ import { FaChevronRight } from 'react-icons/fa';
 const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
   const renderCardGrid = (title, items) => (
     <div
-  className="border bg-white rounded-3 p-3 h-100-white custom-bg-image"
+  className="border bg-white rounded-3 p-3 h-100 custom-bg-image"
   style={
     backgroundImageUrl
       ? { backgroundImage: `url(${backgroundImageUrl})` }
@@ -12,7 +12,7 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
   }
 >
 
-      <div className="d-flex justify-content-between align-items-center mb-3 px-2">
+      <div className="d-flex justify-content-between align-items-center mb-3 px-3">
         <p className="mb-0 section-title fw-semibold text-black">{title}</p>
         <button className='border-0 bg-primary text-white rounded-circle d-flex justify-content-center align-items-center fs-5 p-1'><FaChevronRight /></button>
       </div>
@@ -20,13 +20,13 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
       <div className="row g-sm-0 g-1 ">
         {items.map((item, idx) => (
           <div className="col-6 mb-0 mb-lg-0 g-1" key={idx}>
-            <div className="border rounded-3 p-1 text-center bg-white  h-100">
+            <div className="border rounded-3 p-1 text-center cus-bg  h-100">
               <img
                 src={item.image}
                 alt={item.title}
-                className="img-fluid mb-2 bg-white"
+                className="img-fluid mb-2 bg-white zoom-hover"
                 style={{
-                  maxHeight: '220px', // ← Increased from 150px
+                  maxHeight: '180px', // ← Increased from 150px
                   objectFit: 'contain',
                 }}
               />
@@ -40,8 +40,8 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
   );
 
   return (
-    <div className="container-fluid px-md-1 py-0 bg-white m-0">
-      <div className="row g-0 g-md-1 align-items-stretch p-0 m-0"
+    <div className="container-fluid p-0 m-0">
+      <div className="row g-0  align-items-stretch"
       >
         {/* Product Columns */}
         {columns.map((col, index) => (
@@ -54,13 +54,14 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
         {/* Image Column (optional, not main focus now) */}
         {imageColumn && (
           <div className="col-12 col-sm-12 col-md-12 col-lg-4  ">
-            <div className="border rounded-3 h-100 overflow-hidden p-0">
+            <div className="border rounded-3 h-100 overflow-hidden p-2 cus-bg">
               <img
                 src={imageColumn.imageUrl}
                 alt={imageColumn.alt || 'Showcase'}
-                className="w-100 h-100 zoom-hover"
+                className="w-100 h-auto"
                 style={{
                   objectFit: 'cover',
+                  maxHeight: '560px',
                   display: 'block',
                 }}
               />
@@ -70,7 +71,7 @@ const SectionFour = ({ columns = [], imageColumn, backgroundImageUrl }) => {
       </div>
       <div className='d-flex d-lg-none' >
         <a href="# " className="w-100 p-2 rounded mt-2 btn btn-primary fs-6 ">View More  <span>&gt;</span></a>
-        {/* <button className="w-100 p-2 rounded mt-2 btn btn-primary fs-6">View More</button> */}
+        
       </div>
     </div>
   );

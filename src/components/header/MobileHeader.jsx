@@ -58,7 +58,7 @@ const MobileHeader = () => {
           </div>
         </div>
 
-        <div className="d-flex align-items-center gap-3">
+        <div className="d-flex align-items-center gap-3 gap-md-4">
           <div className="position-relative">
             <CiHeart size={25} color="#007bff" />
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>

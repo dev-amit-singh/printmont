@@ -51,8 +51,11 @@ const SecondCarousel = ({
   }, []);
 
   return (
-    <div className="horizontal-scroll-wrapper position-relative bg-white pt-3 m-0 m-md-1 ">
-      <p className="fw-semibold fs-4 mb-3 ms-3 ">{title}</p>
+    <div className="horizontal-scroll-wrapper position-relative bg-white pt-3 m-0 m-md-1">
+      <div className='d-flex justify-content-between align-items-center'>
+        <p className="fw-semibold fs-4 mb-3 ms-3 ">{title}</p>
+        <button className='btn btn-primary me-4'>veiw all</button>
+      </div>
 
       {/* Show arrows conditionally */}
       {canScrollLeft && (
@@ -75,9 +78,9 @@ const SecondCarousel = ({
         </button>
       )}
 
-      <div className="scroll-container " ref={scrollRef}>
+      <div className="scroll-container" ref={scrollRef}>
         {products.map((product, index) => (
-          <div className="scroll-card  border pb-3 pb-lg-0" key={index}>
+          <div className="scroll-card  border pb-1 pb-lg-0" key={index}>
             <div className="image-container bg-white ">
               <img
                 src={product.img}

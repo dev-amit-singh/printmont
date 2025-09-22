@@ -16,9 +16,7 @@
     scrollbar-width: none; /* Firefox */
   }
   
-  .scroll-container::-webkit-scrollbar {
-    display: none; /* Chrome */
-  }
+  
   
   /* Card */
   .scroll-card {
@@ -141,5 +139,3 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   position: relative;
 }
-
-  

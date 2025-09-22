@@ -7,6 +7,11 @@ import {
 import { GoHeart } from "react-icons/go";
 import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 import { GiShoppingCart } from "react-icons/gi";
+import { LuChartNoAxesCombined } from "react-icons/lu";
+import { IoMdNotifications } from "react-icons/io";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { FcAdvertising, FcCustomerSupport } from "react-icons/fc";
+
 import { IoSearch } from "react-icons/io5";
 import LoginDropdown from "./LoginDropdown";
 
@@ -76,14 +81,18 @@ function Header() {
                     onMouseLeave={() => setShowPreferences(false)}
                     style={{ cursor: "pointer" }}
                   >
-                    <PiDotsThreeOutlineVerticalFill size={24} className="p-1 text-primary"/>
+                    <PiDotsThreeOutlineVerticalFill size={24} className="p-1 text-primary" />
 
                     {showPreferences && (
                       <div className="dropdown-menu show preference-menu position-absolute end-1 top-20 z-3 d-block min-w-200 p-2  shadow rounded bg-white border-0">
-                        <div className="dropdown-item">📈 Become a Seller</div>
-                        <div className="dropdown-item">🔔 Notification Preferences</div>
-                        <div className="dropdown-item">🎧 24x7 Customer Care</div>
-                        <div className="dropdown-item">📈 Advertise</div>
+                        <div className="dropdown-item"><span><LuChartNoAxesCombined size={18} />
+                        </span> Become a Seller</div>
+                        <div className="dropdown-item"><span><IoMdNotifications size={18} color="f8d830"/>
+                        </span> Notification Preferences</div>
+                        <div className="dropdown-item"><span><FcCustomerSupport size={18}/>
+                        </span> 24x7 Customer Care</div>
+                        <div className="dropdown-item"><span><FcAdvertising size={18}/>
+                        </span> Advertise</div>
                       </div>
                     )}
                   </div>

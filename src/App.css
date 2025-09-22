@@ -104,10 +104,7 @@ input:focus {
   box-shadow: none !important;
 }
 
-/* .defc {
-  background: rgb(243, 243, 243);
-  background: rgb(242, 243, 245);
-} */
+
 
 .headon {
   position: sticky;
@@ -380,22 +377,23 @@ border-radius: 10px;
     border: 1px solid;
   }
 .square-container {
-  width: 200px;
+  width: 170px;
+  max-width: 200px;
+  height: auto;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   /* border: 2px solid; */
-  padding: 5px;
   
   border-width: 0.5px;
 }
 
 .square-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   border-radius: 8px;
 }
 .yellow-bg{
@@ -421,7 +419,7 @@ input:focus {
   font-size: 10px;
   border-radius: 50%;
   width: 17px;
-  height: 1 7px;
+  height: 17px;
   font-weight: bolder;
   background-color: rgb(13, 109, 252);
   color: white;
@@ -518,6 +516,9 @@ input:focus {
   .feature-icon{
     width: 50px;
   }
+  .cus-bg{
+    background-color: transparent;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -579,6 +580,9 @@ input:focus {
   .section-nine-card{
     height: 220px;
   }
+  .cus-bg{
+    background-color: transparent;
+  }
   
 
 }
@@ -601,7 +605,7 @@ input:focus {
   }
   .section-two-img{
     height: auto;
-    max-height: 280px;
+    max-height: 283px;
   }
   .section-title{
     font-size: 1.2rem;
@@ -613,5 +617,8 @@ input:focus {
 .find-product{
   font-size: xx-large;
 }
+.cus-bg{
+    background-color: white;
+  }
 
 }

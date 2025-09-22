@@ -10,9 +10,9 @@ const SectionEight = ({ columns = [], imageColumn }) => {
         <h5 className="mb-0 fw-bold">{title}</h5>
         <button
           className="border-0 bg-primary text-white rounded-circle d-flex justify-content-center align-items-center"
-          style={{ width: '32px', height: '32px' }}
+          style={{ width: '28px', height: '28px' }}
         >
-          <FaChevronRight size={16} />
+          <FaChevronRight size={18} />
         </button>
       </div>
 
@@ -26,7 +26,8 @@ const SectionEight = ({ columns = [], imageColumn }) => {
                 alt={item.title}
                 className="img-fluid mb-2"
                 style={{
-                  maxHeight: '150px',
+                  height: '150px',
+                  maxHeight: '180px',
                   objectFit: 'contain',
                 }}
               />
@@ -40,10 +41,11 @@ const SectionEight = ({ columns = [], imageColumn }) => {
   );
 
   return (
-    <div className="container-fluid px-md-3 py-3 custom-bg">
-      <div className="row g-3 align-items-stretch">
+    <div className="container-fluid custom-bg p-0 m-0 mt-2">
+      <div className="row g-1 align-items-stretch m-0 p-0">
         {/* Loop through each product section */}
         {columns.map((col, index) => (
+
           <div className="col-12 col-sm-6 col-md-12 col-lg-4" key={index}>
             {renderCardGrid(col.title, col.items)}
           </div>

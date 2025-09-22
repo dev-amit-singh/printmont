@@ -47,7 +47,7 @@ const SingleProduct = ({
 
   return (
     <div
-      className={`horizontal-scroll-wrapper position-relative bg-transparent mx-0 mx-lg-1 pt-3 ${backgroundImageUrl ? 'custom-bg-image' : ''}`}
+      className={`horizontal-scroll-wrapper position-relative cus-bg mx-1 pt-3 pb-2 ${backgroundImageUrl ? 'custom-bg-image' : ''}`}
       style={{ backgroundImage: backgroundImageUrl ? `url(${backgroundImageUrl})` :  {backgroundColor: 'white'} }}
     >
       <p className="fw-semibold fs-5 fs-md-4 mb-1 mb-lg-3 ms-0 ms-lg-3">{title}</p>

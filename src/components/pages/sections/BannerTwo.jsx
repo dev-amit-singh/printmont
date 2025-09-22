@@ -4,14 +4,14 @@ const BannerTwo = () => {
   return (
     <>
       {/* Large screens (≥ md): Flex side-by-side layout */}
-      <div className="container-fluid bg-light d-none d-md-flex align-items-center justify-content-center gap-2 pe-4 m-md-2">
+      <div className="container-fluid bg-none d-none d-md-flex align-items-center justify-content-center gap-1 px-1 py-0 m-0 ">
         <div className="col-4 p-0 rounded">
           <img className='rounded' src="./section-img/girl-with-bag.jpg" width="100%" alt="online-shopping" />
         </div>
         <div className="col-4 p-0 rounded">
           <img className='rounded' src="./section-img/online-shopping.jpg" width="100%" alt="lap-hoodie" />
         </div>
-        <div className="col-4 p-0 rounded">
+        <div className="col-4 p-0 m-0 rounded">
           <img className='rounded' src="./section-img/footwear.jpg" width="100%" alt="lap-hoodie" />
         </div>
       </div>

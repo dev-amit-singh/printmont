@@ -351,8 +351,8 @@ export const tablewareItems = [
     { title: 'Dustor', discount: 'Min 50% Off', image: './girl-product-img/dust-cleaner.jpeg' },
   ];
 export const tablewareItems2 = [
-    { title: 'Eduway Modern Drafting Table', discount: 'Top Offer', image: './card/table-1.jpeg' },
-    { title: 'Wall decoration and storage', discount: 'Min 50% Off', image: './card/table-2.jpeg' },
+    { title: 'Eduway Modern  Table', discount: 'Top Offer', image: './card/table-1.jpeg' },
+    { title: 'Wall decoration', discount: 'Min 50% Off', image: './card/table-2.jpeg' },
     { title: 'Dustor', discount: 'Min 50% Off', image: './card/table-3.jpeg' },
     { title: 'Dustor', discount: 'Min 50% Off', image: './card/table-4.jpeg' },
   ];
@@ -625,3 +625,127 @@ export const mobileItems =  [
     discount: '35% OFF' },
 
 ]
+export const gridsectionfirst = [
+    {
+      title: "Women's",
+      mainItem: {
+        img: "./sq/women1.jpg",
+        name: "T-shirt",
+        offer: "Min 50% off",
+      },
+      sideItems: [
+        {
+          img: "./sq/women2.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+        {
+          img: "./sq/women3.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+      ],
+    },
+    {
+      title: "Men's",
+      mainItem: {
+        img: "./sq/men1.jpg",
+        name: "Shirt",
+        offer: "Min 40% off",
+      },
+      sideItems: [
+        {
+          img: "./sq/men2.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+        {
+          img: "./sq/men3.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+      ],
+    },
+    {
+      title: "Kid's",
+      mainItem: {
+        img: "./sq/kid1.jpg",
+        name: "Frock",
+        offer: "Min 30% off",
+      },
+      sideItems: [
+        {
+          img: "./sq/kid2.jpg",
+          name: "Toy",
+          offer: "Top offer",
+        },
+        {
+          img: "./sq/kid3.jpg",
+          name: "Toy",
+          offer: "Top offer",
+        },
+      ],
+    },
+  ];
+export const gridsectionsecond = [
+    {
+      title: "Top Rated",
+      mainItem: {
+        img: "/sqtopdeals/1.jpg",
+        name: "T-shirt",
+        offer: "Min 50% off",
+      },
+      sideItems: [
+        {
+          img: "/sqtopdeals/2.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+        {
+          img: "/sqtopdeals/3.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+      ],
+    },
+    {
+      title: "Top Deals",
+      mainItem: {
+        img: "/sqtopdeals/4.jpg",
+        name: "Shirt",
+        offer: "Min 40% off",
+      },
+      sideItems: [
+        {
+          img: "/sqtopdeals/5.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+        {
+          img: "/sqtopdeals/6.jpg",
+          name: "Watch",
+          offer: "Top offer",
+        },
+      ],
+    },
+    {
+      title: "Top Selection",
+      mainItem: {
+        img: "/sqtopdeals/7.jpg",
+        name: "Frock",
+        offer: "Min 30% off",
+      },
+      sideItems: [
+        {
+          img: "/sqtopdeals/8.jpg",
+          name: "Toy",
+          offer: "Top offer",
+        },
+        {
+          img: "/sqtopdeals/9.jpg",
+          name: "Toy",
+          offer: "Top offer",
+        },
+      ],
+    },
+  ];
