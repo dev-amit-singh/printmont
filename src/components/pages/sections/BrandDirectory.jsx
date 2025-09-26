@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { FiMinus, FiPlus } from "react-icons/fi";
+
+
 
 const BrandDirectory = () => {
-  return (
-    <div style={{ padding: "20px", fontFamily: "Arial", fontSize: "12px" }} className="bg-white">
+  const [isMobile, setIsMobile] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+
+  // Detect screen size
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768); // mobile breakpoint
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  const content = (
+    <div style={{ fontFamily: "Arial", fontSize: "12px" }} className="bg-white">
       <h6 className="text-secondary">Top Stories: <span className="text-dark">Brand Directory</span></h6>
 
       <div className="d-flex flex-column mb-3 justify-content-center align-items-starstan p-0 m-0">
@@ -43,6 +58,37 @@ const BrandDirectory = () => {
 
 
 
+    </div>
+  );
+
+  return (
+    <div className="container-fluid">
+      {isMobile ? (
+        <div>
+          {/* Collapsible button only on mobile */}
+          <button
+            // className="btn btn-light border w-100 text-start shadow-large p-3 text-center text-muted fw-bold fs-5"
+            className="d-flex w-100 shadow-large py-2 border bd py-2 align-items-center justify-content-center gap-3 text-muted fs-5 fw-semibold"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Why Us{isOpen ? <FiMinus /> : <FiPlus/>}
+          </button>
+
+          <div
+            ref={contentRef}
+            style={{
+              maxHeight: isOpen ? contentRef.current.scrollHeight + "px" : "0px",
+              overflow: "hidden",
+              transition: "max-height 0.4s ease"
+            }}
+          >
+            <div className="p-2">{content}</div>
+          </div>
+        </div>
+      ) : (
+        // On big screens → show normally
+        content
+      )}
     </div>
   );
 };

@@ -1,40 +1,41 @@
-import { useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import './App.css'
-import Header from './components/header/Header'
-import Home from './components/pages/Home'
-import Footer from './components/footer/Footer'
-import MobileHeader from './components/header/MobileHeader';
-import MobHome from './components/pages/MobHome';
+import './App.css';
+import Header from './components/header/Header';
+import Home from './components/pages/Home';
+import Footer from './components/footer/Footer';
+import AddToCart from "./components/orders/AddToCart";
+import Profile from "./components/user/Profile";
+import Wishlist from "./components/orders/Wishlist";
+import Orders from "./components/orders/Orders";
+import User from "./components/user/User";
+import Login from "./components/user/Login";
+import GiftCard from "./components/orders/GiftCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-        {/* Desktop Header */}
-      <div className="d-none d-lg-block headon">
-        <Header />
-      </div>
-      {/* Mobile Header */}
-      <div className="d-block d-lg-none sticky-navbar">
-        <MobileHeader />
-      </div>
-      <div className='home-main px-1'>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<AddToCart />} />
 
-      {/* <div className='d-none d-lg-flex'> */}
-        <Home/>
-        {/* </div> */}
-      {/* <div className='d-block d-lg-none'><MobHome/></div> */}
-      </div>
-      <Footer/>
-      
+        <Route path="/user" element={<User />}>
+          <Route index element={<Profile />} /> {/*default tab when someone click on user*/}
+          <Route path="profile" element={<Profile />} />
+          <Route path="wishlist" element={<Wishlist />} />
+          <Route path="giftcard" element={<GiftCard />} />
+        </Route>
+        <Route path="/orders" element={<Orders/>}/>
 
-    </>
-  )
+        <Route path="/login" element={<Login/>}/>
+
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

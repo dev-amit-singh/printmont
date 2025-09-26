@@ -7,7 +7,7 @@ import SectionTwo from './sections/SectionTwo'
 import SectionThree from './sections/GiftFinder.jsx'
 import Banner from './sections/Banner'
 import BannerTwo from './sections/BannerTwo'
-import {discount, bestsellerProduct, bestsellerProducts, girloutfit, homeDecorItems, tablewareItems,  tablewareItems2, homeDecorItems2, dealsandcategories, columns, gridsectionfirst, gridsectionsecond,} from '../../../data/data'
+import {discount, bestsellerProduct, bestsellerProducts, girloutfit, homeDecorItems, tablewareItems,  tablewareItems2, homeDecorItems2, dealsandcategories, columns, gridsectionfirst, gridsectionsecond, bannerImages,} from '../../../data/data'
 import Singleproduct from './carousel/Singleproduct'
 import SectionFour from './sections/SectionFour'
 import SectionFourReverse from './sections/SectionFourReverse'
@@ -17,10 +17,15 @@ import BrandDirectory from './sections/BrandDirectory'
 import SectionEight from './sections/SectionEight.jsx'
 import Slider from './carousel/Slider.jsx'
 import BulkOrder from './sections/BulkOrder.jsx'
+import MobileHeader from '../header/MobileHeader.jsx'
+import MobHome from './MobHome.jsx'
+import GiftFinder from './sections/GiftFinder.jsx'
 
 const Home = () => {
   return (
     <>
+    {/* Desktop Home */}
+    <div  className='d-none d-lg-flex custom-bg'>
       <div className='relative'>
         <Categories />
 
@@ -37,13 +42,14 @@ const Home = () => {
       </div>
 
       <SectionTwo />
+      <GiftFinder/>
 
       <div className='mt-lg-2 pt-lg-4 pt-1'>
         <SecondCarousel products={bestsellerProduct} title="Top Selection" badgeText="Customizable" />
       </div>
 
-      <div className='mt-2 mx-0 px-0'>
-        <Banner />
+      <div className='my-2 mx-0 px-0'>
+        <Banner images={bannerImages} />
       </div>
 
       <div className='  pt-lg-2 pt-1'>
@@ -86,12 +92,12 @@ const Home = () => {
         },
       ]}
       imageColumn={{
-        imageUrl: './girl-product-img/girl-1.webp',
+        imageUrl: '/girl-product-img/girl-1.webp',
         alt: 'Home Decor Showcase',
       }}/>
       </div>
       <div  className='mt-1 mx-0'>
-      <Banner/>
+      <Banner images={bannerImages} />
     </div>
       <div className='custom-bg'>
         <SectionFourReverse  columns={[
@@ -115,7 +121,7 @@ const Home = () => {
       </div>
       
       <div  className='mt-3 mx-0 px-0'>
-      <Banner/>
+      <Banner images={bannerImages} />
     </div>
 
     <div>
@@ -129,20 +135,48 @@ const Home = () => {
       <SectionGrid data={gridsectionfirst} />
     </div>
     <div  className='mt-3 mx-0 px-0'>
-      <Banner
-        desktopImg="./section-img/desktop-banner.jpg"
-        mobileImg="./section-img/mobile-banner.jpg"
-        alt="Main promotional banner"
-        className="custom-bg"
-      />
+      <Banner images={bannerImages} />
     </div>
-    <div>
+    <div className='my-0 my-lg-4'>
       <SectionGrid data={gridsectionsecond} />
     </div>
+    <SectionTwo/>
+
+    <div>
+          <SectionFourReverse  columns={[
+        {
+          type: 'image',
+          imageUrl: '/girl-product-img/girl-1.webp',
+          alt: 'Girl with Product',
+        },
+        {
+          type: 'grid',
+          title: 'Women',
+          items: tablewareItems2,
+        },
+        {
+          type: 'grid',
+          title: '',
+          items: homeDecorItems2,
+        },
+      ]} />
+    </div>
+
+    <div className='mt-1'>
+      <Singleproduct products={girloutfit} title="Recently Viewed" />
+    </div>
+
     
-    <BrandDirectory/>
+    <div className='mt-0 mt-lg-4'>
+      <BrandDirectory/>
+    </div>
 
     <BulkOrder/>
+      </div>
+
+    </div>
+      <div className='d-block d-lg-none'>
+        <MobHome/>
       </div>
     </>
   )

@@ -1,20 +1,20 @@
 
 
-export const categoriesImg = [
-    { name: "Gift Sets", img: "./section-img/pro9.jpg", badge:"klabdcjbdaj" },
-    { name: "Event Merchandise", img: "./section-img/pro1.webp" },
-    { name: "Cloths & Bags", img: "./section-img/pro2.jpg" },
-    { name: "Trophies", img: "./section-img/pro3.jpg" },
-    { name: "Stationary", img: "./section-img/pro4.jpg" },
-    { name: "Office Supplies", img: "./section-img/pro6.jpg" },
-    { name: "Pens", img: "./section-img/pro5.jpg" },
-    { name: "Keychain", img: "./section-img/pro7.jpg" },
-    { name: "Drinkware", img: "./section-img/pro8.jpg" },
-    { name: "Personalized", img: "./section-img/pro1.webp" },
-    { name: "Tech Products", img: "./section-img/pro4.jpg" },
-    { name: "Diwali Gifts", img: "./section-img/pro1.webp" },
-    { name: "Occasions", img: "./section-img/pro3.jpg" },
-    { name: "Corporate Gift", img: "./section-img/pro7.jpg" },
+export const categoriesData = [
+    { name: "Gift Sets", img: "./section-img/pro9.jpg", url:'#' },
+    { name: "Event Merchandise", img: "./section-img/pro1.webp", url:'#' },
+    { name: "Cloths & Bags", img: "./section-img/pro2.jpg", url:'#' },
+    { name: "Trophies", img: "./section-img/pro3.jpg" , url:'#'},
+    { name: "Stationary", img: "./section-img/pro4.jpg" , url:'#'},
+    { name: "Office Supplies", img: "./section-img/pro6.jpg", url:'#' },
+    { name: "Pens", img: "./section-img/pro5.jpg", url:'#'},
+    { name: "Keychain", img: "./section-img/pro7.jpg", url:'#'},
+    { name: "Drinkware", img: "./section-img/pro8.jpg", url:'#' },
+    { name: "Personalized", img: "./section-img/pro1.webp", url:'#' },
+    { name: "Tech Products", img: "./section-img/pro4.jpg", url:'#' },
+    { name: "Diwali Gifts", img: "./section-img/pro1.webp", url:'#' },
+    { name: "Occasions", img: "./section-img/pro3.jpg", url:'#' },
+    { name: "Corporate Gift", img: "./section-img/pro7.jpg", url:'#' },
 
 ]
 export const fristcrouselImg = [
@@ -150,11 +150,69 @@ export const bestsellerProduct = [
         
     },
      {
-        title: "Cotton kurti",
+        title: "Cotton kurtiwertyuiop[poiuytrewqwertyuio",
         img: "./men_shirt/men-shirt-4.jpeg",
         price: 2000,
         originalPrice: 2500,
         discount: "60% Off",
+        
+    },
+];
+export const bestHealth = [
+    {
+        title: "Women's Embroidered Designer Kurti",
+        img: "./top-deals/baby-cycle.jpg",
+        discount: "60% Off",
+        badge: "Deal of the day"
+        
+    },
+    {
+        title: "Men's Casual T-shirt",
+        img: "./top-deals/bottle2.jpeg",
+        discount: "20% Off",
+        badge: "Deal of the day"
+        
+    },
+    {
+        title: "Watch Premium Design",
+        img: "./top-deals/facewash.jpg",
+        discount: "70% Off",
+        badge: "Deal of the day"
+        
+    },
+    {
+        title: "Designer Kurti",
+        img: "./top-deals/hot-bag.png",
+        discount: "70% Off",
+        badge: "Deal of the day"
+        
+    }, 
+    {
+        title: "Realme X50 Pro 5G",
+        img: "./section-img/pro14.jpeg",
+        discount: "60% Off",
+        badge: "Deal of the day"
+        
+    },
+    {
+        title: "Cotton kurti",
+        img: "./men_shirt/men-shirt-2.jpeg",
+        discount: "60% Off",
+        badge: "Deal of the day"
+        
+    },
+    {
+        title: "Cotton kurti",
+        img: "./men_shirt/men-shirt-4.jpeg",
+        discount: "60% Off",
+        badge: "Deal of the day"
+        
+    },
+     {
+        title: "Cotton kurtiwertyuiop[poiuytrewqwertyuio",
+        img: "./men_shirt/men-shirt-4.jpeg",
+        discount: "60% Off",
+        badge: "Deal of the day"
         
     },
 ];
@@ -519,19 +577,22 @@ export const sampleProducts = [
     id: 1,
     img: '/electro/sq-phone.jpeg',
     title: 'Product 1',
-    discount: '20% OFF'
+    discount: '20% OFF',
+    badge: "Deal of the day"
   },
   {
     id: 2,
     img: '/electro/sq-charger.jpg',
     title: 'Product 2',
-    discount: '10% OFF'
+    discount: '10% OFF',
+    badge: "Deal of the day"
   },
   {
     id: 3,
     img: '/electro/sq-trimmer.png',
     title: 'Product 3',
-    discount: '15% OFF'
+    discount: '15% OFF',
+    badge: "Deal of the day"
   }
 ];
  export const topImages = [
@@ -748,4 +809,78 @@ export const gridsectionsecond = [
         },
       ],
     },
+  ];
+  export const CartData = [
+    {
+      image: "/sqtopdeals/4.jpg",
+      title: "Shirt",
+      discount: "Min 40% off",
+      price: 1900,
+      originalPrice: 1000,
+      oldPrice: 2500,
+      available: 1,
+
+    },
+    {
+      title: "Women's Casual Top",
+      image: '/card/table-1.jpeg',
+      price: 800,
+      originalPrice: 1000,
+      discount: '20% off',
+      available: 0,
+    },
+  ]
+  export const Completeorders = [
+      {
+          id: 1,
+          title: "Everfab Self Design Women Round Neck Purple...",
+          color: "Purple",
+          size: "XL",
+          price: 117,
+          deliveryDate: "Aug 28",
+          status: "Delivered",
+          image: "/card/home-dec-1.jpeg",
+      },
+      // You can add more orders here
+      // Copy above object for demo
+      {
+          id: 2,
+          title: "JM LOOKS Fashion Fancy Solid Backstrap Comfortable Sole Stylish Casual Heel Sandal",
+          color: "Purple",
+          size: "XL",
+          price: 117,
+          deliveryDate: "Aug 28",
+          status: "Delivered",
+          image: "/sqtopdeals/1.jpg",
+      },
+      {
+          id: 3,
+          title: "Centrino Women's Berkin-Style Slip-On Sandals",
+          color: "Purple",
+          size: "XL",
+          price: 117,
+          deliveryDate: "Aug 20",
+          status: "Delivered",
+          image: "/sqtopdeals/2.jpg",
+      },
+      {
+          id: 4,
+          title: "Everfab Self Design Women Round Neck Purple...",
+          color: "Purple",
+          size: "XL",
+          price: 117,
+          deliveryDate: "jan 08",
+          status: "Delivered",
+          image: "/women-dress/women-dress-12.jpeg",
+      },
+  ];
+  export const bannerImages = [
+    {
+      src: './section-img/add1.png',
+      alt: 'online-shopping'
+    },
+    {
+      src: './section-img/add2.png',
+      alt: 'lap-hoodie'
+    }
   ];

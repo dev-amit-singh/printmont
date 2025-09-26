@@ -9,7 +9,7 @@ import SectionOne from './sections/SectionOne'
 import SecondCarousel from './carousel/SecondCarousel'
 
 
-import { bestsellerProduct, bestsellerProducts, budsItems, dealsandcategories, girloutfit, homeDecorItems, mensFashionItems, mobileItems, productList, sampleProducts, specialoffer, tablewareItems, womensFashionItems } from '../../../data/data'
+import { bannerImages, bestHealth, bestsellerProduct, bestsellerProducts, budsItems, dealsandcategories, girloutfit, gridproducts, gridsectionfirst, gridsectionsecond, homeDecorItems, mensFashionItems, mobileItems, productList, sampleProducts, specialoffer, tablewareItems, womensFashionItems } from '../../../data/data'
 import SingleProduct from './carousel/Singleproduct'
 import SectionTwo from './sections/SectionTwo'
 import ProductGrid from './sections/ProductGrid'
@@ -20,6 +20,7 @@ import SectionEightSingle from './sections/SectionEightSingle'
 import ProductList from './sections/ProductList'
 import SectionSix from './sections/SectionGrid'
 import SectionGrid from './sections/SectionGrid'
+import BrandDirectory from './sections/BrandDirectory'
 
 const MobHome = () => {
   return (
@@ -40,7 +41,7 @@ const MobHome = () => {
 
         <div><SectionTwo/></div>
 
-        <div><ProductGrid/></div>
+        <div><ProductGrid title="End of Season Sale" products={gridproducts} /></div>
 
         <div>
             <SectionFour   columns={[ {
@@ -54,7 +55,11 @@ const MobHome = () => {
         </div>
 
         <div className='mt-2'>
-            <SingleProduct products={specialoffer} backgroundImageUrl="./bg/flashsale.png"/>
+            <SingleProduct products={specialoffer} title='Only for 1 Hour' backgroundImageUrl="./bg/flashsale.png"/>
+        </div>
+
+        <div>
+             <Banner images={bannerImages} />
         </div>
 
         <div><SectionNine products={sampleProducts}/></div>
@@ -71,33 +76,30 @@ const MobHome = () => {
         </div>
 
         <div>
-            <SectionFour   columns={[ {
+            <SectionFour columns={[ {
                   title: 'Women\'s Fashion',
                   items: womensFashionItems,
-
-                },
-            ]}
-            backgroundImageUrl="./bg/bg-4.png"
-            />
+                }, ]}
+            backgroundImageUrl="./bg/bg-4.png" />
         </div>
 
         <div className='mt-2'>
         <SecondCarousel products={bestsellerProduct} title="Top Selection" />
       </div>
 
-      <div><Banner/></div>
+      <div><Banner images={bannerImages} /></div>
 
       <div className='mt-2'>
         <SecondCarousel products={bestsellerProducts} title="Discount For You" />
       </div>
 
-      <div><Banner/></div>
+      <div><Banner images={bannerImages} /></div>
 
       <div className='mt-2'>
         <SecondCarousel products={dealsandcategories} title="Top Deals on categories" />
       </div>
 
-      <div><Banner/></div>
+      <div><Banner images={bannerImages} /></div>
 
       <div className=' mt-lg-3 pt-lg-2 pt-1 defc'>
         <SingleProduct products={girloutfit} title="Women's" />
@@ -122,12 +124,21 @@ const MobHome = () => {
         <div className='mt-2'>
         <SecondCarousel products={dealsandcategories} title="Top Deals on categories" />
       </div>
+        <div><ProductList products={productList}/></div>
+      <div>
+         <SectionFour columns={[ {
+                     title: 'Home Decor Items',
+                     items: homeDecorItems,
+                   },]}
+            backgroundImageUrl="./bg/bg-4.png"
+            />
+      </div>
 
-      <div><ProductList products={productList}/></div>
 
-        <div><ProductGrid/></div>
 
         <div><ProductList products={productList}/></div>
+
+        <div><Banner images={bannerImages} /></div>
 
         <div>
             <SectionFour   columns={[ {
@@ -138,13 +149,15 @@ const MobHome = () => {
             />
         </div>
 
-      <div className='mt-2'><Banner/></div>
+        <div><ProductList products={productList}/></div>
+
+        <div><ProductGrid title="Great Choices" products={gridproducts} bgImage={'/bg/grid-product-bg.png'} /></div>
+
+        <div><ProductList products={productList}/></div>
 
       <div>
         <SectionGrid/>
       </div>
-
-      <div className=''><Bannerthree/></div>
 
       <div className='mt-2'>
             <SectionFour   columns={[ {
@@ -156,9 +169,76 @@ const MobHome = () => {
             backgroundImageUrl="./bg/bg-3.png"
             />
         </div>
+        <div><Banner images={bannerImages} /></div>
+        <div className='mt-1'>
+          <SectionGrid data={gridsectionfirst} />
+        </div>
 
         <div>
-            {/* <Bannerthree/> */}
+          <Bannerthree/>
+        </div>
+
+        <div className='mt-1'>
+          <SectionGrid data={gridsectionsecond} />
+        </div>
+
+        <div className='mt-2'>
+            <SectionFour   columns={[ {
+                  title: 'New Fashion',
+                  items: mensFashionItems,
+
+                },
+            ]}
+            backgroundImageUrl="./bg/bg-3.png"
+            />
+        </div>
+
+        <div><ProductList products={productList}/></div>
+
+        <div>
+          <SecondCarousel products={bestHealth} title="Best of Health & Wellness" />
+        </div>
+
+        <div>
+          <SecondCarousel products={sampleProducts} title="Electronics" />
+        </div>
+
+        <div><Banner images={bannerImages} /></div>
+
+        <div><ProductList products={productList}/></div>
+
+        <div>
+          <SecondCarousel products={bestHealth} title="Home Usage" />
+        </div>
+
+        <div className='mt-2'>
+            <SectionFour   columns={[ {
+                  title: 'Best for Health',
+                  items: mensFashionItems,
+
+                },
+            ]}
+            backgroundImageUrl="./bg/bg-3.png"
+            />
+        </div>
+
+        <div><ProductList products={productList}/></div>
+        
+        <div className='bg-white'>
+            <SingleProduct products={girloutfit} title="Recently Viewed" />
+        </div>
+
+
+
+
+        {/* <div className=''><Bannerthree/></div> */}
+        
+        {/* <div>
+            <Banner images={bannerImages} />
+        </div> */}
+
+        <div className='mt-2'>
+          <BrandDirectory/>
         </div>
     </div>
     </>

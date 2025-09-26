@@ -1,23 +1,39 @@
-import React from 'react'
+// Banner.jsx
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Banner = () => {
+const Banner = ({ images = [] }) => {
   return (
-    <>
-    <div className='container-fluid m-0 p-0 '>
-      <div className='row g-1'>
-        <div className='col-md-6'>
-          <img width={"100%"} height={"auto"} src="./section-img/add1.png" className="rounded" alt="online-shopping "/>
-        
-        </div>
-
-        <div className='col-md-6'>
-          <img width={"100%"} height={"auto"} src="./section-img/add2.png" className="rounded" alt="lap-hoodie"/>
-        </div>
+   <>
+     <div className="container-fluid m-0 p-0  ">
+      <div className="row g-1 m-0 px-1 container-fluid d-flex">
+        {images.map((image, index) => (
+          <div className="col-md-6" key={index}>
+            {/* <div className=''> */}
+              <img
+              src={image.src}
+              alt={image.alt || `banner-${index + 1}`}
+              className="rounded"
+              width="100%"
+              height="auto"
+            />
+            {/* </div> */}
+          </div>
+        ))}
       </div>
-
     </div>
-    </>
-  )
-}
+   </>
+  );
+};
 
-export default Banner
+// Optional: Type-checking with PropTypes
+Banner.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string
+    })
+  ).isRequired
+};
+
+export default Banner;

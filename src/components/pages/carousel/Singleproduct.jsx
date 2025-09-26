@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { MdExpandLess } from 'react-icons/md';
 
 const SingleProduct = ({
   products,
@@ -47,10 +48,16 @@ const SingleProduct = ({
 
   return (
     <div
-      className={`horizontal-scroll-wrapper position-relative cus-bg mx-1 pt-3 pb-2 ${backgroundImageUrl ? 'custom-bg-image' : ''}`}
+      className={`horizontal-scroll-wrapper position-relative cus-bg mx-1 pt-3 pb-2  border bd ${backgroundImageUrl ? 'custom-bg-image' : ''}`}
       style={{ backgroundImage: backgroundImageUrl ? `url(${backgroundImageUrl})` :  {backgroundColor: 'white'} }}
     >
-      <p className="fw-semibold fs-5 fs-md-4 mb-1 mb-lg-3 ms-0 ms-lg-3">{title}</p>
+      <div className='d-flex justify-content-between align-items-center'>
+        <p className="fw-semibold fs-5 fs-md-4 mb-1 mb-lg-3 ms-0 ms-lg-3">{title}</p>
+        <button className="bg-theme border bd px-2 py-1 rounded d-none d-lg-flex">
+          View All{" "}
+          <MdExpandLess size={20} style={{ transform: "rotate(90deg)" }} />
+        </button>
+      </div>
 
       {canScrollLeft && (
         <button className="scroll-arrow left" onClick={() => scroll('left')}>
@@ -80,7 +87,7 @@ const SingleProduct = ({
               />
             </div>
             <div className="card-body text-center">
-              <p className="medium my-2">{product.title}</p>
+              <p className="medium my-2 product-name small text-truncate">{product.title}</p>
               <p className="medium my-2 text-success fw-bold">{product.discount}</p>
             </div>
           </div>

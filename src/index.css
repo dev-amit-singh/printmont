@@ -24,8 +24,8 @@
     background: white;
     border-radius: 8px;
     width: calc((100% - 64px) / 5); /* default for large screens */
-    min-width: 20px;
-    max-width: 260px;
+    min-width: 50px;
+    max-width: 250px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     border: 2px solid red;
   }
@@ -73,6 +73,49 @@
   .scroll-arrow.right {
     right: 0;
   }
+  /* Filter Modal */
+.filter-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  display: flex;
+  align-items: flex-end;
+}
+
+.filter-modal {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: 1rem 1rem 0 0;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Filter Pills */
+.filter-pill {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f8f9fa;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.filter-pill.selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
   
   /* Show arrows only on desktop */
   @media (min-width: 1200px) {
@@ -93,11 +136,9 @@
   /* Small screens: 2 cards */
   @media (max-width: 767px) {
     .scroll-card {
-      width: 70%;
+      width: 45%;
     }
-    .scroll-card{
-      width:  130px;
-    }
+    
   }
   .bulk-order-container {
   position: fixed;
@@ -138,4 +179,95 @@
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   position: relative;
+}
+
+
+
+/* lknzcbacbjkbacasdfghjkoiuygzxcvbnm,..kjhbvcxzcvbnm,.kjhgf*/
+
+
+/* Login.css */
+
+.login-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #f1f3f6;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left,
+.login-right {
+  padding: 40px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left {
+  width: 35%;
+  background-color: #2874f0;
+  color: #fff;
+}
+
+.login-left h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.login-left p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.login-left img {
+  width: 100px;
+  margin-top: auto;
+}
+
+.login-right {
+  width: 35%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #2874f0;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.login-form .terms {
+  font-size: 13px;
+  color: #878787;
+  margin-bottom: 20px;
+}
+
+.login-form .terms a {
+  color: #2874f0;
+  text-decoration: none;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #fb641b;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.login-form .signup-link {
+  font-size: 14px;
+  color: #2874f0;
+  text-align: center;
 }

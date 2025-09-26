@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { MdExpandLess, MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from 'react-router';
+
 
 const SecondCarousel = ({
   products,
@@ -51,10 +54,14 @@ const SecondCarousel = ({
   }, []);
 
   return (
-    <div className="horizontal-scroll-wrapper position-relative bg-white pt-3 m-0 m-md-1">
+    <div className="horizontal-scroll-wrapper position-relative bg-white pt-3 m-0 m-md-1 border bd">
       <div className='d-flex justify-content-between align-items-center'>
-        <p className="fw-semibold fs-4 mb-3 ms-3 ">{title}</p>
-        <button className='btn btn-primary me-4'>veiw all</button>
+        <p className="fw-semibold fs-5 fs-lg-4  mb-3 ms-3 ">{title}</p>
+        <button className="bg-theme border bd px-1 py-1 px-lg-2 py-lg-1 circle d-flex align-items-center justify-content-center">
+          <span className='d-none d-lg-flex'>View All{" "}</span>
+          <MdKeyboardArrowRight size={19} />
+        </button>
+
       </div>
 
       {/* Show arrows conditionally */}
@@ -92,14 +99,19 @@ const SecondCarousel = ({
               </span>
             </div>
 
-            <div className="card-body text-center">
+            <div className="text-center">
               <div className="d-none d-lg-flex justify-content-center align-item-center bg-theme text-uppercase text-white fw-medium mt-1 fs-7 fs-md-6">
                 {badgeText}
               </div>
-              <p className="medium mb-0 title">{product.title}</p>
+              {/* <p className="medium mb-0 title text-truncate px-2">{product.title}</p> */}
+              <Link
+                to="#"
+                className="product-name text-truncate d-block txsm px-1 text-center">
+                {product.title}
+              </Link>
               <p className="mb-0 title p-1">
-               ₹{product.price}{" "}
-                <del className="text-muted title">₹{product.originalPrice}</del>{" "} 
+                ₹{product.price}{" "}
+                <del className="text-muted title">₹{product.originalPrice}</del>{" "}
                 <span className="text-success fw-bold">{product.discount}</span>
               </p>
             </div>

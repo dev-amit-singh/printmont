@@ -9,69 +9,73 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import MobileFooter from "./MobileFooter";
 import IconX from "./IconX";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
     <>
-      <div className="d-none d-lg-block"><IconX/></div>
+      <div className="d-none d-lg-block"><IconX /></div>
       <footer className="foot-bg text-light pt-5 pb-2 small-screen-foot">
         <div className="container-fluid px-5">
           <div className="row g-4">
-            {/* First section: All link groups */}
+
             <div className="col-12 col-lg-6">
               <div className="row g-4">
-                {/* Our Company */}
+
                 <div className="col-6 col-md-3 ">
                   <h6 className="text-uppercase small text-white-50">Our Company</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
-                    <li>Contact Us</li>
-                    <li>About Us</li>
-                    <li>Careers</li>
-                    <li>Affiliate Program</li>
-                    <li>Blog</li>
+                    <li><Link to="/contact" className="text-light text-decoration-none">Contact Us</Link></li>
+                    <li><Link to="/about" className="text-light text-decoration-none">About Us</Link></li>
+                    <li><Link to="/careers" className="text-light text-decoration-none">Careers</Link></li>
+                    <li><Link to="/affiliate" className="text-light text-decoration-none">Affiliate Program</Link></li>
+                    <li><Link to="/blog" className="text-light text-decoration-none">Blog</Link></li>
                   </ul>
+
                 </div>
 
 
                 <div className="col-6 col-md-3">
                   <h6 className="text-uppercase small text-white-50">Policy Info</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
-                    <li>Terms & Conditions</li>
-                    <li>Privacy Policy</li>
-                    <li>Shipping Policy</li>
-                    <li>Return & Refund Policy</li>
+                    <li><Link to="/terms" className="text-light text-decoration-none">Terms & Conditions</Link></li>
+                    <li><Link to="/privacy" className="text-light text-decoration-none">Privacy Policy</Link></li>
+                    <li><Link to="/shipping" className="text-light text-decoration-none">Shipping Policy</Link></li>
+                    <li><Link to="/returns" className="text-light text-decoration-none">Return & Refund Policy</Link></li>
                   </ul>
+
                 </div>
 
-                {/* Quick Links */}
+
                 <div className="col-6 col-md-3">
                   <h6 className="text-uppercase small text-white-50">Quick Links</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
-                    <li>Help Center</li>
-                    <li>Security</li>
-                    <li>Sitemap</li>
-                    <li>FAQ</li>
+                    <li><Link to="/help" className="text-light text-decoration-none">Help Center</Link></li>
+                    <li><Link to="/security" className="text-light text-decoration-none">Security</Link></li>
+                    <li><Link to="/sitemap" className="text-light text-decoration-none">Sitemap</Link></li>
+                    <li><Link to="/faq" className="text-light text-decoration-none">FAQ</Link></li>
                   </ul>
+
                 </div>
 
 
-                {/* Support */}
+
                 <div className="col-6 col-md-3">
                   <h6 className="text-uppercase small text-white-50">Support</h6>
                   <ul className="list-unstyled txsm d-flex flex-column gap-1">
-                    <li>Account Settings</li>
-                    <li>My Orders</li>
-                    <li>My Wallet</li>
-                    <li>Track Orders</li>
+                    <li><Link to="/account" className="text-light text-decoration-none">Account Settings</Link></li>
+                    <li><Link to="/orders" className="text-light text-decoration-none">My Orders</Link></li>
+                    <li><Link to="/wallet" className="text-light text-decoration-none">My Wallet</Link></li>
+                    <li><Link to="/track-order" className="text-light text-decoration-none">Track Orders</Link></li>
                   </ul>
+
                 </div>
               </div>
             </div>
 
-            {/* Second section: Address and Subscribe */}
             <div className="col-12 col-lg-6 wbd border-start border-light ps-4 ">
               <div className="row g-4">
-                {/* Address */}
+
                 <div className="col-12 col-md-6">
                   <h6 className="medium text-white-50">Registered Address:</h6>
                   <address className="txsm">
@@ -98,7 +102,6 @@ const Footer = () => {
                   </div>
                 </div>
 
-                {/* Subscribe */}
                 <div className="col-12 col-md-6">
                   <h6 className="small">Subscribe</h6>
                   <form className="d-flex">
@@ -118,23 +121,21 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Divider */}
           <hr className="border-light border-1 my-4" />
 
-          {/* Bottom row */}
-          <div className="row text-center text-md-start align-items-center gy-3">
+          <div className="row text-center text-md-start align-items-center pb-3">
             <div className="col-12 col-md-6 d-flex flex-wrap justify-content-around justify-content-md-start gap-5 small">
               <span>
-                <img src="/become-seller.png" alt="" width={"20px"} height={"20px"}/> Become a Seller
+                <img src="/become-seller.png" alt="" width={"20px"} height={"20px"} /> Become a Seller
               </span>
               <span>
-                <img src="/advertising.png" alt="" width={"20px"} height={"20px"}/> Advertising
+                <img src="/advertising.png" alt="" width={"20px"} height={"20px"} /> Advertising
               </span>
               <span>
-                <img src="/printmont-coin.png" alt="" width={"20px"} height={"20px"}/> Printmont Coins
+                <img src="/printmont-coin.png" alt="" width={"20px"} height={"20px"} /> Printmont Coins
               </span>
               <span>
-                <img src="/Help-center.png" alt="" width={"20px"} height={"20px"}/> Help Center
+                <img src="/Help-center.png" alt="" width={"20px"} height={"20px"} /> Help Center
               </span>
             </div>
             <div className="col-12 col-md-3 small text-center">

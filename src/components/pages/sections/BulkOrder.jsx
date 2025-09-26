@@ -3,6 +3,7 @@ import { ImCancelCircle } from "react-icons/im";
 
 const BulkOrder = () => {
     const [showModal, setShowModal] = useState(false);
+    const [showFileInput, setShowFileInput] = useState(false);
 
     return (
         <>
@@ -20,22 +21,23 @@ const BulkOrder = () => {
                         <div className='row'>
                             <div className='col-9 m-0 p-0'>
                                 <div className='d-flex justify-content-end align-items-center'>
-                                    <h5 className="mb-0 ">Contact For Bulk Requirement</h5>
+                                    <h5 className="mb-0 fw-bold">Contact For Bulk Requirement</h5>
                                 </div>
-
                             </div>
-                            <div className='col-3 p-0 m-0 '>
-                               <div className='d-flex justify-content-end align-items-center me-3'> 
-                                    <ImCancelCircle onClick={() => setShowModal(false)} size={25} className='text-light-subtle'/>
-                               </div>
+                            <div className='col-3 p-0 m-0'>
+                                <div className='d-flex justify-content-end align-items-center me-3'>
+                                    <ImCancelCircle 
+                                        onClick={() => setShowModal(false)} 
+                                        size={25} 
+                                        className='text-light-subtle cursor-pointer' 
+                                    />
+                                </div>
                             </div>
                         </div>
 
-                        
-
                         <div className="text-center mb-2">
                             <i className="bi bi-telephone-fill"></i>{' '}
-                            <a href="tel:+919811003511" className="text-primary">+91-9811003511</a>
+                            <a href="tel:+919811003511" className="text-primary num">+91-9811003511</a>
                         </div>
 
                         <form>
@@ -70,10 +72,23 @@ const BulkOrder = () => {
                             </div>
 
                             <div className="mb-2">
-                                <label htmlFor="attachments" className="form-label fw-semibold m-0 ">
-                                    Your Attachments (If Available)
-                                </label>
-                                <input className="form-control" type="file" id="attachments" />
+                                <div className='d-flex justify-content-start align-items-center gap-3'>
+                                    <label htmlFor="availattachments" className="form-label fw-semibold m-0">
+                                        Your Attachments (If Available)
+                                    </label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="availattachments" 
+                                        className="form-check-input bd border-2 "
+                                        checked={showFileInput}
+                                        onChange={(e) => setShowFileInput(e.target.checked)}
+                                    />
+                                </div>
+
+                                {/* Show file input only when checkbox is checked */}
+                                {showFileInput && (
+                                    <input className="form-control mt-2" type="file" id="attachments" />
+                                )}
                             </div>
 
                             <button type="submit" className="btn btn-primary w-100">Submit</button>

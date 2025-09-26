@@ -1,15 +1,14 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-
-const SectionGrid = ({ data }) => {
+const SectionGrid = ({ data = [] }) => {
   return (
     <div className="container-fluid custom-bg m-0 p-0">
       <div className="row m-0 p-0 g-1">
         {data.map((cat, idx) => (
           <div key={idx} className="col-12 col-md-12 col-lg-4">
-            <div className="px-2 pt-2 d-flex flex-column bg-white rounded-3">
+            <div className="px-2 pt-2 d-flex flex-column bg-white rounded-3  border bd">
               {/* Header */}
-              <div className="pb-2 d-flex justify-content-between align-items-center">
+              <div className="pb-2 d-flex justify-content-between align-items-center ">
                 <h4>{cat.title}</h4>
                 <IoIosArrowDroprightCircle
                   size={30}
@@ -22,9 +21,9 @@ const SectionGrid = ({ data }) => {
                 {/* Main Item */}
                 <div className="d-flex flex-column justify-content-center align-items-center">
                   <div className="square-container rounded-3">
-                    <img src={cat.mainItem.img} alt={cat.mainItem.name} />
+                    <img src={cat.mainItem.img} alt={cat.mainItem.name} className="zoom-hover "/>
                   </div>
-                  <p className="m-0 p-0 fw-bold product-name-font">
+                  <p className="m-0 p-0 product-name-font pri">
                     {cat.mainItem.name}
                   </p>
                   <p className="m-0 p-0 fs-8 offer">{cat.mainItem.offer}</p>
@@ -37,12 +36,12 @@ const SectionGrid = ({ data }) => {
                   {cat.sideItems.map((item, i) => (
                     <div
                       key={i}
-                      className="d-flex flex-column justify-content-center align-items-center px-2"
+                      className="d-flex flex-column justify-content-center align-items-center"
                     >
                       <div className="square-container rounded-3">
-                        <img src={item.img} alt={item.name} />
+                        <img src={item.img} alt={item.name} className="zoom-hover"/>
                       </div>
-                      <p className="m-0 p-0 fw-bold">{item.name}</p>
+                      <p className="m-0 p-0 fw- pri">{item.name}</p>
                       <span className="m-0 p-0 fs-8 offer">{item.offer}</span>
                     </div>
                   ))}

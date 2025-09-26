@@ -15,6 +15,7 @@ import {
 } from 'react-icons/fa';
 import { CiHeart } from "react-icons/ci";
 import { IoSearch, IoSearchSharp } from "react-icons/io5";
+import { Link } from 'react-router';
 
 const MobileHeader = () => {
   const [dropdowns, setDropdowns] = useState({});
@@ -40,14 +41,17 @@ const MobileHeader = () => {
             <GiHamburgerMenu size={24} />
           </button>
 
-          <img src="./PrintLogo.png" alt="Printmont Logo" style={{ height: '30px' }} />
+          <Link to='/'>
+            <img src="./PrintLogo.png" alt="printmont Logo" style={{ height: '30px' }} />
+          </Link>
+
           <div className="nav-searchbar mx-2 small-nav">
             <div className="input-group rounded-md md-input-group border m-auto">
               <input
                 id='global-search'
                 name='global_search'
                 type="text"
-                className="form-control bg-transparent border-0"
+                className="form-control bg-transparent outline-0 border-0"
                 placeholder="Search for products, Brands and more"
                 aria-label="Search"
               />
@@ -60,13 +64,18 @@ const MobileHeader = () => {
 
         <div className="d-flex align-items-center gap-3 gap-md-4">
           <div className="position-relative">
-            <CiHeart size={25} color="#007bff" />
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>
+            <Link to='/user/wishlist'>
+              <CiHeart size={25} color="#007bff" />
+            <div className="notify-mes"><span className="notify-num">4</span></div>
+            </Link>
           </div>
 
           <div className="position-relative">
+            <Link to='/cart'>
             <GiShoppingCart size={25} color="#007bff" />
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2</span>
+            <div className="notify-mes"><span className="notify-num">4</span></div>
+            </Link>
+            
           </div>
 
           <div className='d-flex align-items-center gap-1 justify-content-center border px-2 py-1 rounded login-button'>
@@ -76,7 +85,7 @@ const MobileHeader = () => {
         </div>
 
         <div className='mt-1 border d-flex flex-col align-items-center justify-content-center nav_search_div search_bar d-md-none gap-sm-0'>
-          <input id='searchInput' name='search' type="text" className='border-1 nav_search' placeholder='Search for products, Brands and more' />
+          <input id='searchInput' name='search' type="text" className='border-0 nav_search' placeholder='Search for products, Brands and more' />
           <IoSearchSharp className='fs-2' />
         </div>
       </nav>
@@ -129,7 +138,7 @@ const MobileHeader = () => {
               <li className="list-group-item d-flex align-items-center gap-2"><FaBoxOpen /> My Orders</li>
               <li className="list-group-item d-flex align-items-center gap-2"><FaPaperPlane /> Track Order</li>
               <li className="list-group-item d-flex align-items-center gap-2"><FaWallet /> My Wallet</li>
-              <li className="list-group-item d-flex align-items-center gap-2"><FaStore /> Sell On Printmont</li>
+              <li className="list-group-item d-flex align-items-center gap-2"><FaStore /> Sell On printmont</li>
             </ul>
           </div>
         </div>

@@ -10,7 +10,7 @@ const banners = [
 const SectionOne = () => {
   return (
     <div className="container-fluid m-0 p-0">
-      <div className="row gap-0 m-0 px-0 container-fluid d-flex g-1">
+      <div className="row g-1 gap-0 m-0 px-1 container-fluid d-flex">
         {banners.map((src, index) => (
           <div className="col-6 col-lg-3 rounded-md " key={index}>
             <img

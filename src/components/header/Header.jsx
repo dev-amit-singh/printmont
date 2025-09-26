@@ -14,6 +14,7 @@ import { FcAdvertising, FcCustomerSupport } from "react-icons/fc";
 
 import { IoSearch } from "react-icons/io5";
 import LoginDropdown from "./LoginDropdown";
+import MobileHeader from "./MobileHeader";
 
 function Header() {
   const [showPreferences, setShowPreferences] = useState(false);
@@ -21,8 +22,9 @@ function Header() {
 
   return (
     <>
+    <div className="d-none d-lg-flex">
       <div className="container-fluid bg-white headon">
-        <div className="container-fluid d-flex justify-content-around align-items-center">
+        <div className="container-fluid d-flex justify-content-around align-itemsz-center">
           <Navbar expand="lg" className="border-bottom py-2">
             <Container fluid>
               {/* Logo + Toggle (Left) */}
@@ -51,7 +53,7 @@ function Header() {
 
                 {/* Right: Icons */}
                 <Nav className="ms-auto d-flex align-items-center gap-2 text-center">
-                  <Nav.Link href="#" className="d-flex align-items-center gap-2">
+                  <Nav.Link href="/user/wishlist" className="d-flex align-items-center gap-2">
                     <div className="position-relative">
                       <GoHeart size={25} color="#007bff" />
                       <div className="notify-mes"><span className="notify-num">4</span></div>
@@ -59,7 +61,7 @@ function Header() {
                     <span className="fs-6 ms-2">Wishlist</span>
                   </Nav.Link>
 
-                  <Nav.Link href="#" className="d-flex justify-content-center align-items-center gap-2">
+                  <Nav.Link href="/cart" className="d-flex justify-content-center align-items-center gap-2">
                     <div className="position-relative">
                       <GiShoppingCart size={30} color="#007bff" />
                       <div className="notify-mes">
@@ -75,7 +77,7 @@ function Header() {
 
                   {/* Hover-based Three Dots Menu */}
                   <div
-                    className="position-relative border bd  rounded"
+                    className="position-relative rounded"
                     ref={preferenceRef}
                     onMouseEnter={() => setShowPreferences(true)}
                     onMouseLeave={() => setShowPreferences(false)}
@@ -101,6 +103,10 @@ function Header() {
             </Container>
           </Navbar>
         </div>
+      </div>
+    </div>
+    <div className="d-block d-lg-none sticky-navbar">
+        <MobileHeader/>
       </div>
     </>
   );

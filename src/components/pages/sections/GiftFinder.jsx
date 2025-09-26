@@ -11,6 +11,8 @@ const GiftFinder = () => {
   };
 
   return (
+    <div className='find_product_main flex-column'>
+      <p className='fw-medium ps-3 find-product d-none d-md-block'>Find Gift for your Business and Loved Ones</p>
     <div className="d-flex justify-content-center my-0 ">
       <div className="bg-white p-3 rounded shadow-sm" style={{ maxWidth: '1100px', width: '100%' }}>
         <div className="d-flex flex-wrap align-items-center gap-3">
@@ -64,6 +66,7 @@ const GiftFinder = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
